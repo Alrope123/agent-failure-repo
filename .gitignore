@@ -1,0 +1,23 @@
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# --- Payload guard: large / regenerable artifacts never belong in source ---
+# (mostly zero-hit today; they are here so a stray artifact can't be committed)
+*.jsonl
+*.parquet
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.pkl
+*.npy
+*.log
+*.out
+*.err
+data/
+checkpoints/
+outputs/
