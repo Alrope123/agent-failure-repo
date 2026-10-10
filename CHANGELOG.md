@@ -1,11 +1,9 @@
 # Changelog
 
-All notable changes to Long-Horizon Agent Failures, newest first. Format follows
-[Keep a Changelog](https://keepachangelog.com/); this project aims for
-[Semantic Versioning](https://semver.org/).
+## 2026-10-10 — Local collection starter
 
-## [Unreleased]
-
-### Added
-- Initial scaffold: PROJECT.md manifest, README, docs (architecture + decisions),
-  changelog, hygiene check.
+- Added instructions to find real incidents in contributor-authorized history.
+- Separated task packages, documentation, commands, and evaluation records.
+- Added submission templates and a metadata checker that does not execute tasks.
+- Added a synthetic stale-handoff example to demonstrate reproduction mechanics.
+- No real incident collection or fresh model evaluation has been performed.

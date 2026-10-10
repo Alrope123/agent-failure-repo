@@ -1,21 +1,50 @@
-# Decision log (ADRs) — Long-Horizon Agent Failures
+# Why the collection works this way
 
-Architecture Decision Records: one short entry per non-obvious choice, newest
-first. Capturing *why* is what keeps this repo maintainable — the next person
-(or you in six months) inherits the reasoning, not just the result.
+Recorded on 2026-10-10.
 
-Each entry: **Context** (what forced a decision) → **Decision** (what we chose)
-→ **Consequences** (what it costs / rules out). Never rewrite a past decision;
-supersede it with a new one that links back.
+## Summary
 
----
+Collect real incidents broadly, preserve their temporal dependencies, and separate
+observations from fresh evaluations. Keep documentation, problems, results, and
+commands separate. The main limitation is that packaging checks cannot establish
+whether an incident is real or its explanation is correct.
 
-## ADR-0001 — Record architecture decisions
+## Preserve the sequence that caused the difficulty
 
-- **Date:** _fill in_
-- **Status:** accepted
-- **Context:** Choices made silently get re-litigated and reverted by people who
-  don't know why they were made.
-- **Decision:** Record every non-obvious decision here, in this format.
-- **Consequences:** A small, ongoing writing cost; a durable, greppable record
-  of *why* the codebase is the way it is.
+A small task must retain the earlier fact and the later decision that depends
+on it. Reducing only the final broken code creates a bug-fixing task and loses
+the behavior we wanted to study. Padding a prompt to make it long does not
+replace the original dependency.
+
+## Accept incomplete evidence and label it
+
+An incident can be valuable before anyone builds a reproduction. We separate
+incident reports, runnable packages, fresh model reproduction, and evidence
+from a temporal comparison. Only real fresh model runs support model
+reproduction; inserting a known bad solution checks the judge.
+
+## Use the earlier structure without importing the benchmark
+
+The earlier environment-collection contract separated documentation, problems,
+results, and commands. This kit keeps those boundaries with smaller forms
+suitable for contributors. Its metadata is not a drop-in implementation of the
+older benchmark schemas, and no historical results are copied here.
+
+## Keep originals private and submissions reviewable
+
+Past sessions can contain other people's code, credentials, or personal
+information. Agents inspect only owner-selected sources and prepare sanitized
+derivatives. The owner reviews the exact files before upload. Ignoring raw
+histories in Git helps prevent accidents but is not a privacy check.
+
+## Use local, dependency-free collection tools
+
+Python's standard library is enough to create and inspect packages. The kit
+does not choose an agent provider, run paid experiments, install project
+dependencies, or execute contributions during metadata validation. Each
+reproduction declares its own requirements and isolation needs.
+
+## Keep the repository local
+
+The owner explicitly selected a local repository for this initial version.
+There is no remote, publication workflow, or automatic upload.

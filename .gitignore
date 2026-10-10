@@ -1,13 +1,22 @@
-# --- OS / editor noise ---
+# Original histories and scratch runs stay local.
+/.local/
+/workspaces/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Development and operating system files.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
 .DS_Store
-Thumbs.db
-*.swp
 .idea/
 .vscode/
 
-# --- Payload guard: large / regenerable artifacts never belong in source ---
-# (mostly zero-hit today; they are here so a stray artifact can't be committed)
-*.jsonl
+# Large artifacts are referenced from reviewed records, not committed.
 *.parquet
 *.pt
 *.bin
@@ -15,9 +24,5 @@ Thumbs.db
 *.ckpt
 *.pkl
 *.npy
-*.log
-*.out
-*.err
-data/
-checkpoints/
-outputs/
+
+# Small reviewed JSONL/log evidence is allowed intentionally. Review each file.

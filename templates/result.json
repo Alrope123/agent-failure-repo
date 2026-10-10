@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "problem_id": "replace-with-id",
+  "run_id": "replace-with-run-id",
+  "kind": "model_run",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "temperature": null,
+    "seed": null,
+    "max_steps": null,
+    "context_window": null,
+    "tools": null,
+    "prompt_record": null
+  },
+  "task_revision": null,
+  "judge_revision": null,
+  "started_at": null,
+  "actual_horizon": {
+    "assistant_turns": null,
+    "tool_calls": null,
+    "sessions": null,
+    "elapsed_seconds": null
+  },
+  "validity": "unjudgeable",
+  "exclusion_reason": "Not run yet; replace this form after an actual attempt.",
+  "task_success": null,
+  "target_failure": null,
+  "evidence": [],
+  "notes": "Record preconditions, relevant exposure, and limits. Do not invent an attempt.",
+  "phase": "development",
+  "preconditions_met": null,
+  "failure_opportunity_reached": null
+}
