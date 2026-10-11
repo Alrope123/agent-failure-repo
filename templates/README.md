@@ -24,3 +24,8 @@ Use `symptoms` in each problem manifest to record the existing IDs or `other`.
 Unknown categories can remain empty in a draft. The metadata checker does not
 check the completeness of your search; the collection report makes its limits
 reviewable.
+
+Use `incident-evidence.md` for a detailed record of each candidate in private
+working storage. Follow `docs/EVIDENCE.md` for relevant source material, execution
+context, chronology, contradictions, impact, and reasons information is missing.
+Summarize only after preserving the available evidence.

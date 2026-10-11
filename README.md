@@ -13,6 +13,21 @@ An incident report is welcome even if you cannot reproduce it yet. A long chat
 alone does not show that history caused the error. Explain what earlier event
 the later decision depended on, and be honest about what remains uncertain.
 
+## Install the skill
+
+```bash
+git clone https://github.com/DylanZSZ/agent-failure-repo.git
+cd agent-failure-repo
+python3 commands/install_skill.py --agent claude
+# Or use --agent codex for Codex.
+```
+
+Then invoke `/collect-agent-failures` in Claude Code or
+`$collect-agent-failures` in Codex, naming the histories it may inspect.
+The [installation guide](docs/INSTALL.md) includes the complete prompt, custom
+locations, updates, and what the skill collects. The installed skill is
+self-contained; it creates a separate local collection workspace.
+
 ## Give this to your agent
 
 Copy the paragraph below into your agent after opening this repository. Replace
@@ -34,6 +49,16 @@ This request authorizes examining the named material. It does not authorize
 scanning every account or session, buying model runs, or uploading private data.
 If your agent cannot access older sessions, give it a selected export or start
 with an incident description. It must not invent the missing history.
+
+## Gather detailed evidence
+
+For every candidate, capture the exact task and rules, chronological messages
+and tool results, code changes, baseline and final tests, model and agent
+settings, actual execution length, context changes, consequences, corrections,
+and contradictory evidence. Keep source anchors and explain unknowns. Use
+[the detailed evidence guide](docs/EVIDENCE.md) and
+[incident evidence form](templates/incident-evidence.md). Write a concise summary
+only after preserving the available supporting material privately.
 
 ## What makes a useful contribution?
 
@@ -101,6 +126,7 @@ judge. It is synthetic. Its self-test does not show that any model failed.
 | [results/](results/) | Small, reviewed run records and evidence |
 | [commands/](commands/) | Scaffolding and metadata validation |
 | [templates/](templates/) | Problem and result forms to copy |
+| [skills/](skills/collect-agent-failures/SKILL.md) | Installable collection skill and bundled tools |
 | [examples/](examples/stale-handoff/) | A clearly labeled synthetic example |
 | `.local/` | Ignored private notes, raw histories, and scratch work |
 
@@ -114,9 +140,11 @@ alone does not isolate tools with access to the whole machine.
 
 No collected incidents or fresh model evaluations ship with this starter.
 The checker validates packaging; human review assesses whether a claim is
-meaningful and supported. No remote repository is configured.
+meaningful and supported.
 
 ## Sources
+
+Source repository: [agent-failure-repo](https://github.com/DylanZSZ/agent-failure-repo).
 
 This collection protocol was created on 2026-10-10. Its requirements are in
 [the agent guide](AGENTS.md), [the reproduction guide](docs/REPRODUCING.md),

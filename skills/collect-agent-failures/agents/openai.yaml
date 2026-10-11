@@ -1,0 +1,4 @@
+interface:
+  display_name: "Collect Agent Failures"
+  short_description: "Investigate past failures and build reproducible tasks"
+  default_prompt: "Use $collect-agent-failures to comprehensively inspect my authorized interaction history and collect detailed, reproducible failure cases."

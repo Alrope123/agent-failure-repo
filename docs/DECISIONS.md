@@ -44,7 +44,16 @@ does not choose an agent provider, run paid experiments, install project
 dependencies, or execute contributions during metadata validation. Each
 reproduction declares its own requirements and isolation needs.
 
-## Keep the repository local
+## Publish the kit while keeping incident collection local
 
-The owner explicitly selected a local repository for this initial version.
-There is no remote, publication workflow, or automatic upload.
+The owner initially requested a local repository, then authorized publication
+to DylanZSZ/agent-failure-repo. Installing the kit still collects and uploads
+nothing automatically. Each contributor controls their history and sharing.
+
+## Ship a standalone skill from maintained sources
+
+The installable skill includes a generated copy of the collection guides,
+templates, and local tools. Source files remain in the repository's normal
+locations; the bundle builder checks that packaged copies match them. This
+keeps installation usable without the original checkout while avoiding manual
+edits to two versions of the same guide.

@@ -30,8 +30,35 @@ The validator never executes the commands stored in a problem manifest. A pass
 does not mean a reproduction works, an incident is real, a causal claim is
 supported, or the files are safe to publish. Reviewers make those judgments.
 
-`make check` additionally runs the collection tool tests and the trusted
-synthetic teaching example. It does not run contributed tasks or model calls.
+`make check` additionally runs the collection tool tests, the trusted
+synthetic teaching example, and the skill bundle consistency check. It does
+not run contributed tasks or model calls.
+
+## Install or maintain the skill
+
+Follow [the installation guide](../docs/INSTALL.md) to install the complete
+skill for Codex, Claude Code, or another compatible agent:
+
+```bash
+python3 commands/install_skill.py --agent codex --dry-run
+python3 commands/install_skill.py --agent codex
+```
+
+Use `--agent claude` for Claude Code, or `--dest` for an exact custom skill
+directory. Existing destinations are never overwritten.
+
+Maintainers edit the canonical guides, templates, and collection commands in
+this repository, then rebuild the bundled copy:
+
+```bash
+python3 commands/build_skill.py
+python3 commands/build_skill.py --check
+```
+
+The builder copies an explicit allowlist plus the templates. It excludes
+collected problems, results, and private histories. The check writes nothing
+and detects missing, changed, or extra bundle files. Commit regenerated assets
+with their source changes so the installed skill works independently.
 
 ## Sources
 

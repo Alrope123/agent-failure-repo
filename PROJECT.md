@@ -4,9 +4,9 @@
 | --- | --- |
 | Purpose | Collect real incidents and small reproductions of failures during long-running agent work. |
 | Codebase | This repository |
-| Git remote | Local only, as requested on 2026-10-10 |
+| Git remote | https://github.com/DylanZSZ/agent-failure-repo.git |
 | Language / runtime | Python 3.9 or newer; standard library only |
-| Entrypoints | `commands/new_problem.py`, `commands/validate.py`, `make check` |
+| Entrypoints | `commands/install_skill.py`, `commands/new_problem.py`, `commands/validate.py`, `make check` |
 | Docs | `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, `docs/` |
 | Status | active |
 

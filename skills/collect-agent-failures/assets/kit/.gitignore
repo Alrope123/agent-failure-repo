@@ -1,0 +1,28 @@
+# Original histories and scratch runs stay local.
+/.local/
+/workspaces/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Development and operating system files.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+
+# Large artifacts are referenced from reviewed records, not committed.
+*.parquet
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.pkl
+*.npy
+
+# Small reviewed JSONL/log evidence is allowed intentionally. Review each file.

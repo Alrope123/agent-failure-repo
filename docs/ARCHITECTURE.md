@@ -36,6 +36,19 @@ The example lives separately so synthetic teaching material cannot be mistaken
 for a contributed real incident. Private notes live outside Git, preferably in
 contributor-controlled storage; `.local/` is also ignored.
 
+## Portable skill
+
+`skills/collect-agent-failures/` is a self-contained distribution. Its entrypoint
+routes agents through the same guides and templates used by repository
+contributors. `commands/build_skill.py` copies an explicit set of source files
+into the skill's `assets/kit/` and records their hashes. Edit the canonical files
+and rebuild; do not edit the generated copies. `make check` detects drift.
+
+The installer copies only that skill folder. Its initialization helper creates
+a separate collection workspace with private ledgers, guides, templates, and
+the package tools. Neither script reads history or contacts a service. Detailed
+incident evidence stays separate from the smaller runnable reproduction.
+
 ## Tool behavior and limitations
 
 The scaffolder copies a template into a new problem directory and refuses to

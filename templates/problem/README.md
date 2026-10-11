@@ -14,6 +14,11 @@ confused is not enough.
 
 ## Evidence from the original history
 
+Complete the collection's templates/incident-evidence.md in private working
+storage for this candidate. Use its checklist to capture relevant detail before
+writing this public-facing summary. Include a sanitized evidence attachment
+only after owner review; do not copy private originals here.
+
 Record the agent/model if known and the date. Quote only reviewed, short excerpts
 with stable event or turn references. Label paraphrases. Include the earlier
 instruction or correct state, the later action, and the observed consequence.

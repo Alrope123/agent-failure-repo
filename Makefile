@@ -1,6 +1,6 @@
-.PHONY: check validate test example
+.PHONY: check validate test example skill
 
-check: validate test example
+check: validate test example skill
 
 validate:
 	python3 commands/validate.py
@@ -10,3 +10,6 @@ test:
 
 example:
 	python3 examples/stale-handoff/demo.py
+
+skill:
+	python3 commands/build_skill.py --check

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "replace-with-id",
+  "title": "Replace with a plain-language description of the incident",
+  "status": "incident",
+  "origin": "real_history",
+  "privacy_reviewed": false,
+  "source": {
+    "agent": null,
+    "model": null,
+    "date": null,
+    "evidence_note": "Describe available evidence and its limits in README.md."
+  },
+  "horizon": {
+    "earlier_event": null,
+    "later_decision": null,
+    "intervening_work": null,
+    "mechanism": null,
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": null,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": null,
+    "observed_behavior": null,
+    "target_predicate": null
+  },
+  "commands": {
+    "setup": null,
+    "run_agent": null,
+    "judge": null,
+    "check_reference": null,
+    "control": null
+  },
+  "result_records": [],
+  "symptoms": [],
+  "comparison_note": null
+}

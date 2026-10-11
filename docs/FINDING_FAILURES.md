@@ -34,7 +34,13 @@ Keep duplicate rows linked to the canonical incident, and keep rejected or uncer
 
 The final index must reconcile every candidate to a package, incident-only report, duplicate, rejection, or explicit deferral. Distinguish unique incident counts from symptom-label counts and fresh evaluation attempts. Several labels on one event are not several independent failures.
 
-## Make a short evidence record
+## Capture detailed evidence, then summarize
+
+First use [the detailed evidence guide](EVIDENCE.md) and a private copy of
+[the incident form](../templates/incident-evidence.md). Preserve the full relevant
+sequence, original source anchors, supporting and contrary evidence, and explicit
+unknowns. The questions below guide the readable summary; they do not replace
+the detailed record or limit how much useful evidence to collect.
 
 For each candidate, answer the following in plain English:
 
