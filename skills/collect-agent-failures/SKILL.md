@@ -77,6 +77,10 @@ execution. Relevant detail does not authorize collecting unrelated personal data
 
 ## Reduce and evaluate each feasible incident
 
+Before writing reproduction code, save the candidate's index entry and detailed
+evidence record, including unknowns and source anchors. Update coverage as each
+history range is reviewed; an untouched report template is not a saved inventory.
+
 Follow [the reproduction guide](assets/kit/docs/REPRODUCING.md). From the
 collection directory, create each package with:
 
