@@ -1,0 +1,4 @@
+{
+  "mode": "FLAT",
+  "wrapper": "gpu_tile_compact"
+}

@@ -1,0 +1,13 @@
+{
+  "training": {
+    "skip_eval": true,
+    "training_loss": 10.852
+  },
+  "evaluation": {
+    "checkpoint": "model/final",
+    "state": "F",
+    "exit_status": 0,
+    "correct": 24960,
+    "evaluated": 34884
+  }
+}

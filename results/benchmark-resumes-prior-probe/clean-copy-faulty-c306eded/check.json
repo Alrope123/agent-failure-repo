@@ -1,0 +1,8 @@
+{
+  "command": "python3 checks/judge.py <recorded-decision.json>",
+  "exit_code": 0,
+  "stdout": "{\"validity\": \"valid\", \"task_success\": false, \"target_failure\": true}\n",
+  "stderr": "",
+  "setup_advance": "Passed in disposable clean proposed-file copy; only current fixture exposed.",
+  "note": "Actual repeated scripted check. No model/agent run."
+}

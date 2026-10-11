@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "text-only-ddp-unused-branches",
+  "run_id": "checker-faulty-4968484c",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "53b249aee76c67cbc0253ae158cdc7331e8966cc0169a8528f7589d61cfb032a"
+  },
+  "task_revision": "5136a6e0a734ad6c60309cf15f4294cb80f41098750df73f0f96248aa019f17c",
+  "judge_revision": "4968484ca744a68d529459912651f21af8696fdcaa85d395c65aec7d77d1e14d",
+  "started_at": "2026-10-11T03:03:44.600829+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

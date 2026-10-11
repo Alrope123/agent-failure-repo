@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "overlapping-finite-difference-attempt",
+  "run_id": "clean-copy-faulty-ddc8d862",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "513a4fabfc49a8ecae7738287e5f59b7fd2c7a9eda789d8fdf2de93160a52eff",
+    "clean_copy": true
+  },
+  "task_revision": "252b7f9c845058bd06c486b1d0bba86621a0d3baa97d414bfa20abde659f2017",
+  "judge_revision": "ddc8d8627f473b198fdb73f09bb30926c0df8aca422bab1f1351d0f9bd7ef6c3",
+  "started_at": "2026-10-11T05:12:48.398734+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

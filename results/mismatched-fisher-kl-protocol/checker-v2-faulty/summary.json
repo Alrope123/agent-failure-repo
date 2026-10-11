@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "mismatched-fisher-kl-protocol",
+  "run_id": "checker-v2-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "ff7c3a4563390dd567d875257123343f11161c59c50bc1f2e3a71acf9d443426"
+  },
+  "task_revision": "4f27e6f0e5f8aa5d090a5802561a37760597fa9f09f6a59dbc88a858f1dc27bb",
+  "judge_revision": "f9e020637ca26d03f660b99a11b1dce414986d9d8a70840c4ed74710200f5353",
+  "started_at": "2026-10-11T03:00:45.846537+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

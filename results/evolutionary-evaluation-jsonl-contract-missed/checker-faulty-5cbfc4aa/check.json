@@ -1,0 +1,12 @@
+{
+  "setup_command": "python3 environment/setup.py <new-disposable-dir>",
+  "setup_exit": 0,
+  "advance_command": "python3 environment/advance.py <disposable-dir>",
+  "advance_exit": 0,
+  "command": "python3 checks/judge.py <recorded-decision.json>",
+  "exit_code": 0,
+  "stdout": "{\"validity\": \"valid\", \"task_success\": false, \"target_failure\": true}\n",
+  "stderr": "",
+  "input_kind": "faulty",
+  "note": "Scripted checker control only, no agent/model."
+}

@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "id": "small",
+      "queue": "capacity",
+      "venv": "next-train-env",
+      "wrapper": "next-wrapper"
+    },
+    {
+      "id": "large",
+      "queue": "capacity",
+      "venv": "next-train-env",
+      "wrapper": "next-wrapper"
+    }
+  ]
+}

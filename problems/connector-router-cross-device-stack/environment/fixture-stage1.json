@@ -1,0 +1,5 @@
+{
+  "source_placement": "automatic multi-device",
+  "target_device": "cpu",
+  "cpu_fixture": "pass"
+}

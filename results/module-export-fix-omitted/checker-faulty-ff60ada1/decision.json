@@ -1,0 +1,8 @@
+{
+  "pbs_export": "-V",
+  "exported_variables": [
+    "ALL"
+  ],
+  "python_env": "next-env",
+  "inherited_module_table": true
+}

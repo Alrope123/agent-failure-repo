@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "nested-vl-checkpoint",
+  "run_id": "checker-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "6e7fd988288e643cc4ef91ce47e29a146f67d35ce3f09b776a70b351d9285a23"
+  },
+  "task_revision": "9f6feeed91547955cc700f7768a9bcfa6538b9ab3f5ab93fbdb193b84af3a1bc",
+  "judge_revision": "fc49d9f779030be088639d9ccfb64b150f47feb9bceff4f4aae3830faad23366",
+  "started_at": "2026-10-11T02:26:46.135960+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

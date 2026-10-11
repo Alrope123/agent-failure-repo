@@ -1,0 +1,14 @@
+{
+  "models": [
+    "base-stage2",
+    "nogrounding-stage2"
+  ],
+  "required_suites": [
+    "rexvqa",
+    "endochat_copesd",
+    "endochat_c80_endovis",
+    "pathmmu"
+  ],
+  "pathmmu_batch_models": 2,
+  "pathmmu_minutes_per_model": 40
+}

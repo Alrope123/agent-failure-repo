@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "pathmmu-proxy-obligation-lost",
+  "run_id": "clean-copy-correct-a21d5004",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "94398d169d63d891da5d6683048fc31a8e0ca368767c4dfed1801d559612170c",
+    "clean_copy": true
+  },
+  "task_revision": "73822f3ede47e9c2e8771be0c76e347126b0fefbe13aad9b4ba483c624d8ea51",
+  "judge_revision": "a21d5004ab57c8a88da90e6b78bac38de19fd76c03a430e04b7b154b267dc3a0",
+  "started_at": "2026-10-11T05:12:49.557845+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

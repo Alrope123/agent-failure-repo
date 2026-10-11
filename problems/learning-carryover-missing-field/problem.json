@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "learning-carryover-missing-field",
+  "title": "Learning carryover reads an absent knowledge-state attribute",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-10-03",
+    "evidence_note": "See evidence/history.md for sanitized original code/test excerpts, repair, contrary evidence and limits."
+  },
+  "horizon": {
+    "earlier_event": "N11:3432",
+    "later_decision": "N11:3502",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose the record attribute used to iterate topic states in the carryover loop. Write decision.json with carryover_attribute and build_scenario.",
+    "observed_behavior": "The dynamic-learning implementation replaced working scenario construction with a carryover loop reading latent_state_parameters.topics. The record exposes topic_states instead. Five existing scenario tests raised AttributeError. The field was corrected before final delivery.",
+    "target_predicate": "d.get(\"carryover_attribute\")==\"topics\" and d.get(\"build_scenario\") is True"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/learning-carryover-missing-field/checker-reference-a427cb41/summary.json",
+    "results/learning-carryover-missing-field/checker-faulty-a427cb41/summary.json",
+    "results/learning-carryover-missing-field/clean-copy-correct-a427cb41/summary.json",
+    "results/learning-carryover-missing-field/clean-copy-faulty-a427cb41/summary.json"
+  ],
+  "symptoms": [
+    "3.1"
+  ],
+  "comparison_note": null
+}

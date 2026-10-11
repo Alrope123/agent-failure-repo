@@ -1,0 +1,7 @@
+{
+  "offline": {
+    "pathgen": true,
+    "rex": true,
+    "surge": true
+  }
+}

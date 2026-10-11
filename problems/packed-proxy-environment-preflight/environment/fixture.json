@@ -1,0 +1,8 @@
+{
+  "venv_python": "env/eval/bin/python",
+  "symlink_target": "framework/bin/python",
+  "child_launcher": "python3",
+  "venv_has_required_libraries": true,
+  "base_python_has_required_libraries": false,
+  "scorer_dependencies_checked": false
+}

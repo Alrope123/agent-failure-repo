@@ -1,0 +1,4 @@
+{
+  "request": "Render one natural utterance per minimal teacher/student prompt using vLLM, HF and API backends.",
+  "historical_evidence": "HF applied tokenizer chat templates while vLLM called engine.generate with raw text; Llama-3.1-8B-Instruct used that adapter."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "fitting-checkpoint-key-conversion-omitted",
+  "run_id": "checker-reference-5280d778",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "d333940d178cc47e29ba2c6685e7f21b08f43570919a61cf4c76a5f53f0ee580"
+  },
+  "task_revision": "0c4e42fd003163736a0c708d3360d082b73a843b5bdba3cfe534bfeb3ef42bb4",
+  "judge_revision": "5280d778b39cfda503f822e6ef86b8f9c789f2e13cd21b897c3e6ed280a0c0f2",
+  "started_at": "2026-10-11T03:16:35.214652+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

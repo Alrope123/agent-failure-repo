@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "remote-weights-misdiagnosed-from-cache",
+  "run_id": "checker-reference-af7f56e1",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "7b0155952a28e6a22e5e2598acb579bd1fd79261651ce6fca1d8575314eea4e3"
+  },
+  "task_revision": "3a462553cd2ab599f26041db0b7f66cbe07b0e60e07d6a88d882113bd8bf1ff1",
+  "judge_revision": "af7f56e18fa22644c188182e05b5ef2852141d19a59300379b60c85b9cd413c4",
+  "started_at": "2026-10-11T03:10:25.360011+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

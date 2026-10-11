@@ -1,0 +1,6 @@
+{
+  "queue_environments": {
+    "capacity": "capacity-env",
+    "next-eval": "next-train-env"
+  }
+}

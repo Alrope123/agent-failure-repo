@@ -1,0 +1,15 @@
+{
+  "prior": {
+    "mode": "COMPOSITE",
+    "wrapper": "gpu_dev_compact"
+  },
+  "wrapper_contracts": {
+    "gpu_dev_compact": [
+      "COMPOSITE"
+    ],
+    "gpu_tile_compact": [
+      "FLAT"
+    ]
+  },
+  "requested_mode": "FLAT"
+}

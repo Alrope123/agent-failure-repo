@@ -1,0 +1,16 @@
+{
+  "directories": {
+    "models/rex": {
+      "exists": true,
+      "config": null
+    },
+    "models/rex/final": {
+      "exists": true,
+      "config": {
+        "model_type": "vision_language"
+      },
+      "weights": true
+    }
+  },
+  "existing_example": "models/rex"
+}

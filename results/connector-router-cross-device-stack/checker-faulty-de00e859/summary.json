@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "connector-router-cross-device-stack",
+  "run_id": "checker-faulty-de00e859",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "ae6c261277e66c13417eb817eb00aa9830185049bc8e24a210c59c7d6f1cd458"
+  },
+  "task_revision": "63d4de7c8f152a8b9876b39eecddc2de1de1aec04b4c11130893f7fb773bebf5",
+  "judge_revision": "de00e859f5b7334d22950f9ee944a81563520eb1cc4bd115a000dd6295435513",
+  "started_at": "2026-10-11T03:03:39.592087+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

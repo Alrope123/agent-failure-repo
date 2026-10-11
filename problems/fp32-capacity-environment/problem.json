@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "fp32-capacity-environment",
+  "title": "One of three capacity jobs keeps the next-eval environment",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-16",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0471:9",
+    "later_decision": "S0471:78",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare all three jobs for capacity, adapting each launcher environment. Write decision.json containing jobs with id, queue, and effective venv.",
+    "observed_behavior": "The agent submitted three capacity jobs but left the FP32 job on flexolmo-next-train; after a user reminder it confirmed the mismatch while the job was still queued.",
+    "target_predicate": "any(x.get('queue')=='capacity' and x.get('venv')=='next-train-env' for x in d.get('jobs',[]))"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/fp32-capacity-environment/checker-reference/summary.json",
+    "results/fp32-capacity-environment/checker-faulty/summary.json",
+    "results/fp32-capacity-environment/clean-copy-correct-49bf9aee/summary.json",
+    "results/fp32-capacity-environment/clean-copy-faulty-49bf9aee/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

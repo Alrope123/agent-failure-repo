@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "premature-collection-wrapup",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "8852c8e48214f5f6e403505d1a28e94e40f6b01c872ce59a093bfc6daecee2b1"
+  },
+  "task_revision": "d6b294165a03630ffc8207646db2b418e68188511dd5610df2333a7afff66a32",
+  "judge_revision": "d2f0ef0bbd79d19f38f226d90eaa0e8a9c81ef0ca1ea367d3c0f8e87849e189c",
+  "started_at": "2026-10-11T02:46:42.855777+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Correct reference. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

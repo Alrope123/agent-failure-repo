@@ -1,0 +1,4 @@
+{
+  "workdir": "/workspace/FlexBagel",
+  "launcher": "/workspace/FlexBagel/commands/train.sh"
+}

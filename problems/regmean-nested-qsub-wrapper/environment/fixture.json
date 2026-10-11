@@ -1,0 +1,8 @@
+{
+  "wrapper_behavior": "exec qsub with all arguments after --",
+  "desired_script": "submit/job.sh",
+  "allowed_qsub_options": [
+    "-q",
+    "next-eval"
+  ]
+}

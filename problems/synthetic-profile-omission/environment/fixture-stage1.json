@@ -1,0 +1,13 @@
+{
+  "design": {
+    "domain_specific_profiles": true,
+    "purpose": "control case mix",
+    "axes": [
+      "age_band",
+      "symptom_category"
+    ]
+  },
+  "current_domains": [
+    "radiology"
+  ]
+}

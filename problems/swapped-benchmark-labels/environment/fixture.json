@@ -1,0 +1,18 @@
+{
+  "directory_listing": [
+    "PubMed_test",
+    "PathCLS_test",
+    "EduContent_test"
+  ],
+  "results": {
+    "PubMed_test": {
+      "accuracy": 60.3
+    },
+    "PathCLS_test": {
+      "accuracy": 40.0
+    },
+    "EduContent_test": {
+      "accuracy": 61.1
+    }
+  }
+}

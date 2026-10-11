@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "maximum-walltime-instead-of-estimate",
+  "run_id": "clean-copy-faulty-4861d4e3",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "a03a6952d250926746f6c43fb9d1ae12f1982551ecf953b4a19e72ddf6c466b5",
+    "clean_copy": true
+  },
+  "task_revision": "3d33a652b02ec1ce1ce25c14ea09d09ad68c247bf3c619916c360fef236f6f02",
+  "judge_revision": "4861d4e3d55329b4d331182602a1f2e01dcb568577c46f59d5d0de1a8c3d1ec8",
+  "started_at": "2026-10-11T05:12:44.398232+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

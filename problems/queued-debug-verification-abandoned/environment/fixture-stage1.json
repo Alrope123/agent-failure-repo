@@ -1,0 +1,4 @@
+{
+  "job_id": "debug-job",
+  "operative_rule": "continue monitoring until exact job enters running state"
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "incompatible-fisher-resume",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "a2a0f197a7f57eb9090be9cdbf32d7dbb3269a9d7695deb4dbabcd5dccb2e143"
+  },
+  "task_revision": "946df86c47c366af8a3c20627ad433a9581ea655ae1d69e085681a3195d6ad14",
+  "judge_revision": "dd9a7f813674ed2ba1017ad8ce29d5eec3abe8b13c872d74790251c1fb0a1feb",
+  "started_at": "2026-10-11T02:51:33.045104+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Correct reference. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "inplace-launcher-truncation",
+  "run_id": "clean-copy-faulty-ee14cfdf",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "c6f22709c167d07162697356276c5d2bd60b842d24b36557940052d04bf0109a",
+    "clean_copy": true
+  },
+  "task_revision": "feed619fa019b1abc4d1948c7726ac6e6a79fc4a3b62f2c33186d96a90707dcd",
+  "judge_revision": "ee14cfdf8f39e4912cc15bffec9e240dcd0f78fb96134832a08be42d7f7df1fc",
+  "started_at": "2026-10-11T05:12:43.716934+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

@@ -1,0 +1,26 @@
+{
+  "records": {
+    "head": {
+      "endo_job": "head-endo",
+      "endo": [
+        63.8,
+        52.5,
+        55.9,
+        53.7
+      ],
+      "rex": 76.1,
+      "path": 50.9
+    },
+    "interference": {
+      "endo_job": "interference-endo",
+      "endo": [
+        50.7,
+        43.3,
+        44.9,
+        47.6
+      ],
+      "rex": 70.7,
+      "path": 51.7
+    }
+  }
+}

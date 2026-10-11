@@ -1,0 +1,1 @@
+setup.py installs stage1 fixture only. The trusted evaluator invokes advance.py between prompts, installing stage2 fixture. Neither evaluator script nor future snapshots are mounted into the agent workspace.

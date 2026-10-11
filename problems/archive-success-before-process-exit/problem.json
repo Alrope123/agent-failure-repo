@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "archive-success-before-process-exit",
+  "title": "Archive extraction completion is reported without checking the live process",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-03",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H14-E000009",
+    "later_decision": "H14-E000056",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 3,
+    "tool_calls_between": 7,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 96.648,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Current filesystem file counts do not prove an archive extraction has finished.",
+    "observed_behavior": "The extraction tool returned a live process handle without an exit status. The agent counted the files written so far and reported successful extraction of 1,226 images totaling 42 MB without polling the process. Later in the same source, it reported 4,925 installed images.",
+    "target_predicate": "not d.get(\"wait_for_exit\",False)"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/archive-success-before-process-exit/checker-reference/summary.json",
+    "results/archive-success-before-process-exit/checker-reference-08a6c40b/summary.json",
+    "results/archive-success-before-process-exit/checker-faulty-08a6c40b/summary.json",
+    "results/archive-success-before-process-exit/clean-copy-correct-08a6c40b/summary.json",
+    "results/archive-success-before-process-exit/clean-copy-faulty-08a6c40b/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

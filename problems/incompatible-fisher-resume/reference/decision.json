@@ -1,0 +1,5 @@
+{
+  "action": "reconcile-manifest",
+  "submit": false,
+  "preserve_shards": true
+}

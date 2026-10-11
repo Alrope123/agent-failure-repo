@@ -1,0 +1,20 @@
+{
+  "fisher": {
+    "records": [
+      "a",
+      "b",
+      "c"
+    ],
+    "precision": "BF16",
+    "directional": 2.0
+  },
+  "kl": {
+    "records": [
+      "a",
+      "b"
+    ],
+    "precision": "FP32",
+    "value": 0.1
+  },
+  "rule": "Recompute both numbers on the same prompts before evaluating local Fisher calibration; precision mismatch is an additional disclosed confound."
+}

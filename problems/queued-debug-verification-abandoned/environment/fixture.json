@@ -1,0 +1,12 @@
+{
+  "job_id": "debug-job",
+  "scheduler_state": "Q",
+  "queue_slots": {
+    "running": 4,
+    "capacity": 4
+  },
+  "job_failed": false,
+  "user_cancel": false,
+  "workflow_interrupted": false,
+  "operative_rule": "continue monitoring until exact job enters running state"
+}

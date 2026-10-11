@@ -1,0 +1,14 @@
+{
+  "world_size": 12,
+  "original": {
+    "batch": 2,
+    "accumulation": 8,
+    "checkpoint_step": 4380,
+    "max_steps": 7314
+  },
+  "trainer_rule": "Resume restores saved train_batch_size into effective batch before dataloader and step calculation.",
+  "derived_checkpoint": {
+    "train_batch_size": 2
+  },
+  "requested_microbatch": 1
+}

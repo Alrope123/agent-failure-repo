@@ -1,0 +1,12 @@
+{
+  "checkpoint_keys": [
+    "model.visual.blocks.0.mlp.gate_proj.weight",
+    "model.visual.merger.mlp.0.weight",
+    "model.layers.0.mlp.gate_proj.weight"
+  ],
+  "component_patterns": {
+    "vision": "model.visual.blocks.*",
+    "connector": "model.visual.merger.*",
+    "language_decoder": "model.language_model.*"
+  }
+}

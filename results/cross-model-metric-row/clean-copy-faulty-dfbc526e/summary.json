@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "cross-model-metric-row",
+  "run_id": "clean-copy-faulty-dfbc526e",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "61a5af6cee31c084214acbddb8eb7096231621353231168abb8e04d0bcfa59c4",
+    "clean_copy": true
+  },
+  "task_revision": "d65bc0beefc16370984ddc498d9ae35256b5c14b90699436ff5fcbdcc3231bcb",
+  "judge_revision": "dfbc526ed8c275e0d429f74aaf7bdccc518dc8a9fd42754d0df582119620deb0",
+  "started_at": "2026-10-11T05:12:39.846608+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

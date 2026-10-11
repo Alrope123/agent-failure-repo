@@ -1,0 +1,7 @@
+{
+  "requirements": {
+    "chronological_review": "all available authorized sources",
+    "candidate_dispositions": "every candidate",
+    "continue_across_chunks": true
+  }
+}

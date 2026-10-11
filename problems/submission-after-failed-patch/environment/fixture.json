@@ -1,0 +1,8 @@
+{
+  "patch_result": {
+    "exit_code": 2,
+    "applied": false
+  },
+  "requested_runtime": "level-zero-only",
+  "effective_runtime": "mixed-opencl-level-zero"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "unloadable-training-parent-submission",
+  "run_id": "checker-reference-877726b0",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "146afa54b734594db9080f52fc7ce9970c5c84d9edbbd89da8ee92e91957ac3d"
+  },
+  "task_revision": "93ad11b676bf7e9280a595e5a80aecdd05184b546d5d1e9e89b431c149f72663",
+  "judge_revision": "877726b03b43a3c88040afa411eeef4f8dd73cfbaae15fdf16f3c350a070c522",
+  "started_at": "2026-10-11T03:03:44.796305+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

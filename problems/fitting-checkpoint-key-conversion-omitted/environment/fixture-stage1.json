@@ -1,0 +1,6 @@
+{
+  "checkpoint_keys": [
+    "model.layers.0.weight",
+    "visual.weight"
+  ]
+}

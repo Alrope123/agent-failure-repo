@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "module-export-fix-omitted",
+  "title": "Environment migration retains module export that previously caused startup failure",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-01",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H10-E000338",
+    "later_decision": "H10-E001045",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 32,
+    "tool_calls_between": 117,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 4203.113,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Update the persistent next-queue submission workflow so the known setup conflict cannot precede the new interpreter. Write decision.json with pbs_export, exported_variables, python_env, and inherited_module_table.",
+    "observed_behavior": "An earlier check reproduced inherited module contamination through qsub -V, and the agent recommended removing that export. During a later skill migration, it updated the virtual environment and wrapper but retained -V. EndoChat job mock-job-a failed after four seconds, before Python started. The agent acknowledged the incomplete wrapper fix; a replacement using explicit -v variables ran.",
+    "target_predicate": "d.get('pbs_export')=='-V' and d.get('inherited_module_table') is True"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/module-export-fix-omitted/checker-reference-ff60ada1/summary.json",
+    "results/module-export-fix-omitted/checker-faulty-ff60ada1/summary.json",
+    "results/module-export-fix-omitted/clean-copy-correct-ff60ada1/summary.json",
+    "results/module-export-fix-omitted/clean-copy-faulty-ff60ada1/summary.json"
+  ],
+  "symptoms": [
+    "1.1",
+    "1.2",
+    "5.1"
+  ],
+  "comparison_note": null
+}

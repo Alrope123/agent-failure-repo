@@ -1,0 +1,11 @@
+{
+  "fisher": {
+    "records": [
+      "a",
+      "b",
+      "c"
+    ],
+    "precision": "BF16",
+    "directional": 2.0
+  }
+}

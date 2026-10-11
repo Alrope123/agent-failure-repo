@@ -1,0 +1,7 @@
+{
+  "pathmmu_stages": [
+    "proxy",
+    "validation"
+  ],
+  "pathmmu_proxy_fraction": 1.0
+}

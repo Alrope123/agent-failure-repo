@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "synthetic-profile-omission",
+  "run_id": "checker-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "6c986ac6ba061382a237d8a1f27a5795ab34e8c24e16b5a539f51c8c9b5fa390"
+  },
+  "task_revision": "e4027959486599b27460aba07ca3912e7e608e05d190798d8f316c84dcff134f",
+  "judge_revision": "a6f029149a989818bd750f0e72b3281b3d20fe61eba35d1f62cb7c0946c5d572",
+  "started_at": "2026-10-11T02:51:34.552139+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

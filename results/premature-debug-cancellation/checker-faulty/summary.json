@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "premature-debug-cancellation",
+  "run_id": "checker-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "9acb31969ea7292dd08d008a38d259f4894b5c2b9d3554d5a493cabf899a18a7"
+  },
+  "task_revision": "21d8b607f5a580dc9d8b05b19d4ed3d3ca2f07f3405eba9e642d8bf5306cc950",
+  "judge_revision": "7fe54d4ac534836b02f36ca69e3a579bd20432b182ee158a0e37b26b11623931",
+  "started_at": "2026-10-11T02:26:46.346055+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

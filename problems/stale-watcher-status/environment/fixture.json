@@ -1,0 +1,14 @@
+{
+  "watcher_snapshot": {
+    "captured_at": "2026-01-01T10:00:00Z",
+    "state": "R"
+  },
+  "scheduler_history": {
+    "captured_at": "2026-01-01T12:00:00Z",
+    "state": "F",
+    "exit_status": 0
+  },
+  "artifacts": {
+    "complete": true
+  }
+}

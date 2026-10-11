@@ -1,0 +1,7 @@
+{
+  "suites": [
+    "rexvqa",
+    "endochat_copesd",
+    "endochat_c80_endovis"
+  ]
+}

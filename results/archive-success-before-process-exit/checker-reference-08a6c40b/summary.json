@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "archive-success-before-process-exit",
+  "run_id": "checker-reference-08a6c40b",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "2f29983574a5069aafac393ab2f29f158d271c7a1c442e6bb6ac4d9035ecaca5"
+  },
+  "task_revision": "a360f6c5f4a1f483fe8354da675c2f04d3bd6fb2ee7a7b10ecfc7d03554866a6",
+  "judge_revision": "08a6c40b71266d523d8418f8531eb2d27cf9d20994c598e26a0a8dd9d1367967",
+  "started_at": "2026-10-11T03:03:38.383887+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

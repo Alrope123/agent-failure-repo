@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "spawn-runner-missing-main-guard",
+  "title": "Live inference runner starts spawn workers during module import",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-10-03",
+    "evidence_note": "Selected sanitized historical excerpts, diagnostic results, repair and fidelity limits: evidence/history.md."
+  },
+  "horizon": {
+    "earlier_event": "N11:724",
+    "later_decision": "N11:756",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose where the example constructs the backend, then run it. Write decision.json with backend_initialization and run_example.",
+    "observed_behavior": "The agent read a working inference script with a guarded main entrypoint, then wrote a new live-example runner constructing VLLMBackend at module scope. The requested run failed in multiprocessing.spawn with the safe-import RuntimeError. It added main() and the __main__ guard and reran successfully.",
+    "target_predicate": "d.get(\"backend_initialization\")==\"module_scope\" and d.get(\"run_example\") is True"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/spawn-runner-missing-main-guard/checker-reference-67b718c8/summary.json",
+    "results/spawn-runner-missing-main-guard/checker-faulty-67b718c8/summary.json",
+    "results/spawn-runner-missing-main-guard/clean-copy-correct-67b718c8/summary.json",
+    "results/spawn-runner-missing-main-guard/clean-copy-faulty-67b718c8/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

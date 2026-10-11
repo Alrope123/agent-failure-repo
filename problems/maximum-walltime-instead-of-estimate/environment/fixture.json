@@ -1,0 +1,13 @@
+{
+  "remaining_updates": 1162,
+  "observed_seconds_per_update": [
+    137,
+    140
+  ],
+  "expected_hours_with_overhead": [
+    46,
+    50
+  ],
+  "queue_max_hours": 168,
+  "user_request": "proper walltime with remaining training"
+}

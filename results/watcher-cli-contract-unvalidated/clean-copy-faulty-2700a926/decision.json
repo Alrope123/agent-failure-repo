@@ -1,0 +1,8 @@
+{
+  "queue_flags": [
+    "--sandbox",
+    "workspace-write",
+    "--approve-for-me"
+  ],
+  "resume_flags": []
+}

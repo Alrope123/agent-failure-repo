@@ -1,0 +1,8 @@
+{
+  "requested": {
+    "sample_size": 5000,
+    "sampling": "uniform_random",
+    "seed": 20260919
+  },
+  "previous_successful_wrapper": "sampled"
+}

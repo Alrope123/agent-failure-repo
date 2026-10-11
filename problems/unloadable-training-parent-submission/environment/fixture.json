@@ -1,0 +1,18 @@
+{
+  "requested_model": "training",
+  "filesystem": {
+    "training": {
+      "config.json": null
+    },
+    "training/final": {
+      "config.json": {
+        "model_type": "qwen2_5_vl"
+      }
+    },
+    "training/checkpoint-521": {
+      "config.json": {
+        "model_type": "qwen2_5_vl"
+      }
+    }
+  }
+}

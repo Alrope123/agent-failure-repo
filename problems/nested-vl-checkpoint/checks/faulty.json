@@ -1,0 +1,5 @@
+{
+  "model_path": "model",
+  "model_type": "text_only",
+  "action": "replace-model"
+}

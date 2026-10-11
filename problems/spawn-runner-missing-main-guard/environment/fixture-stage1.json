@@ -1,0 +1,3 @@
+{
+  "worker_start_method": "spawn"
+}

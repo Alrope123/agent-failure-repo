@@ -1,0 +1,4 @@
+{
+  "request": "Implement Aurora-compatible inference and perform the requested one-node Llama test.",
+  "historical_evidence": "Created PBS script with set -euo pipefail before module load frameworks; submitted after bash -n and unit tests."
+}

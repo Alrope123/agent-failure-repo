@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "opd-nested-qsub-wrapper",
+  "run_id": "checker-faulty-a7366b1a",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "7ce1abf4987193c5ca13a88ca02cd2bd9d35699d655c8a3ef314a1e3ce76ca72"
+  },
+  "task_revision": "584c7b679a0feaad2c35440b5ffbe9487263e33559fd2fd2e1ccd122dafd0e87",
+  "judge_revision": "a7366b1a16384a50182f0bdbe0edf519c32dc7d7322abadb5f571be9bdafabe1",
+  "started_at": "2026-10-11T03:13:02.321936+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

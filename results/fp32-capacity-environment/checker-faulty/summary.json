@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "fp32-capacity-environment",
+  "run_id": "checker-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "5905ecbb7f5228498d63bbb21494253d2fed1bb0c0c8a2f4427e64da3639b1f0"
+  },
+  "task_revision": "f3991664eb3c8ef0ed76459953c5a164abe235531916dc6a90064f244cc8af4f",
+  "judge_revision": "49bf9aee3a968b6f7503d53a15ff346b79805aaa67256d56b93179f7fa2e19e7",
+  "started_at": "2026-10-11T02:26:45.723547+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

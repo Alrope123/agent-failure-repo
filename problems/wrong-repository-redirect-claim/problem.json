@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "wrong-repository-redirect-claim",
+  "title": "Login shell changes directory and wrong repository becomes a redirect claim",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-20",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H04-E000009",
+    "later_decision": "H04-E000055",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 2,
+    "tool_calls_between": 9,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 83.339,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "pwd and git -C show the clone is correct and relative inspection ran elsewhere.",
+    "observed_behavior": "After successfully cloning the requested repository, relative reads and remote inspection ran in an existing FlexBagel checkout. The agent asserted that the requested URL redirected to FlexBagel. Explicit git -C and pwd checks disproved that claim, and it corrected the report.",
+    "target_predicate": "not d.get(\"verify_cwd\", False)"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/wrong-repository-redirect-claim/checker-reference-5ba3c4f2/summary.json",
+    "results/wrong-repository-redirect-claim/checker-faulty-5ba3c4f2/summary.json",
+    "results/wrong-repository-redirect-claim/clean-copy-correct-5ba3c4f2/summary.json",
+    "results/wrong-repository-redirect-claim/clean-copy-faulty-5ba3c4f2/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

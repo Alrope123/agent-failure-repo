@@ -1,0 +1,3 @@
+{
+  "module_setup": "references optional unset ZSH_EVAL_CONTEXT"
+}

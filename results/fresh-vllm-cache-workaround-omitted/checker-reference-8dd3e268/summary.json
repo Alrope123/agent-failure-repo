@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "fresh-vllm-cache-workaround-omitted",
+  "run_id": "checker-reference-8dd3e268",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "68a7b1a6b87c5a2c9c2dc992199f49adb3204d80339fe1affc0c47eca7768e40"
+  },
+  "task_revision": "b3a97da3b4d6687f53cd9785f1f0d7cba92cec9ab0b3a7732c64e1c95ae33159",
+  "judge_revision": "8dd3e268b81d4561d726dfabd3014c543124837aecf2715cfc708a0f05662891",
+  "started_at": "2026-10-11T05:05:19.537962+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

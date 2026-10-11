@@ -1,0 +1,20 @@
+{
+  "router_rows": [
+    {
+      "device": "xpu:8",
+      "values": [
+        1,
+        2
+      ]
+    },
+    {
+      "device": "xpu:5",
+      "values": [
+        3,
+        4
+      ]
+    }
+  ],
+  "target_device": "cpu",
+  "stack_contract": "inputs must already share device"
+}

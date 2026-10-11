@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "offline-cache-protection-omitted",
+  "title": "Discovered shared cache workaround is omitted from one related launcher",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-22",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H05-E000227",
+    "later_decision": "H05-E000513",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 17,
+    "tool_calls_between": 66,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 1594.63,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare all three delivered submission environments using the verified complete cache. Write decision.json with offline mapping for pathgen, rex, and surge.",
+    "observed_behavior": "The ReX GPU benchmark failed twice while accessing the online cache, then succeeded in offline mode. The agent carried that workaround into the ReX and Surge submissions but omitted it from PathGen. After the user requested all three jobs, PathGen failed with missing shards while the others ran. The agent confirmed the missing offline variables and resubmitted with the fix.",
+    "target_predicate": "d.get('offline',{}).get('pathgen') is False"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/offline-cache-protection-omitted/checker-reference/summary.json",
+    "results/offline-cache-protection-omitted/checker-faulty/summary.json",
+    "results/offline-cache-protection-omitted/clean-copy-correct-3cab252e/summary.json",
+    "results/offline-cache-protection-omitted/clean-copy-faulty-3cab252e/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

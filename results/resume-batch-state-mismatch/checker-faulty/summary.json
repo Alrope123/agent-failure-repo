@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "resume-batch-state-mismatch",
+  "run_id": "checker-faulty",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "0e5492624dd43d29d85a1f88db922b4ccd9ac943ff764c545610a8274ac66b45"
+  },
+  "task_revision": "f4a8294075a7aeb7ee76c7025f18be9a5a7c0b22599399c2248c287d331c2f4f",
+  "judge_revision": "76164f65b8e464858deb938460fcec016358bcbb5097ca402a8e3298cd231d2b",
+  "started_at": "2026-10-11T02:48:02.228839+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Deliberately faulty input. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

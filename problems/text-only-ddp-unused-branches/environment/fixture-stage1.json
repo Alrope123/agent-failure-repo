@@ -1,0 +1,8 @@
+{
+  "trainer": {
+    "distributed": true,
+    "trainable_vision": true,
+    "find_unused_parameters": false
+  },
+  "original_preprocessing": "drops no-image data"
+}

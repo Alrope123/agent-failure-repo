@@ -1,0 +1,5 @@
+{
+  "queue": "capacity",
+  "train_venv": "venvs/next-train",
+  "submit": true
+}

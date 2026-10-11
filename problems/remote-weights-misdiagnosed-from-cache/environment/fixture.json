@@ -1,0 +1,12 @@
+{
+  "requested_model": "research/model-v2",
+  "cached_files": [
+    "config.json",
+    "model.safetensors.index.json"
+  ],
+  "cached_weight_shards": 0,
+  "remote_metadata": {
+    "weight_shards": 5
+  },
+  "download_probe": "all five available"
+}

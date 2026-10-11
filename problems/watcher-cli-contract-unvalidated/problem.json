@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "watcher-cli-contract-unvalidated",
+  "title": "Mocked delivery tests miss incompatible live Codex CLI arguments",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-23",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H06-E000171",
+    "later_decision": "H06-E000495",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 15,
+    "tool_calls_between": 66,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 2683.773,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "The original CLI logs identify both failures; corrected arguments deliver the same stored event successfully.",
+    "observed_behavior": "The agent implemented watcher delivery with incompatible --sandbox workspace-write and --approve-for-me flags. Its fallback resume also omitted --skip-git-repo-check for a workspace without Git. Ten mock tests passed, with live validation explicitly pending. An authorized five-minute test completed, but archived logs showed that the real CLI rejected both delivery paths. Correcting the flags and retrying delivered the event.",
+    "target_predicate": "(\"--sandbox\" in d.get(\"queue_flags\",[]) and \"--approve-for-me\" in d.get(\"queue_flags\",[])) or \"--skip-git-repo-check\" not in d.get(\"resume_flags\",[])"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/watcher-cli-contract-unvalidated/checker-reference-2700a926/summary.json",
+    "results/watcher-cli-contract-unvalidated/checker-faulty-2700a926/summary.json",
+    "results/watcher-cli-contract-unvalidated/clean-copy-correct-2700a926/summary.json",
+    "results/watcher-cli-contract-unvalidated/clean-copy-faulty-2700a926/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

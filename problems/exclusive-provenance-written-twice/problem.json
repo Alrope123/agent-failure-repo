@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "exclusive-provenance-written-twice",
+  "title": "Repair writes the same exclusive-create provenance file twice",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-08",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H17-E000462",
+    "later_decision": "H17-E000492",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 2,
+    "tool_calls_between": 4,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 219.415,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "The helper refuses overwriting a file, so retaining the original write and adding another guarantees failure.",
+    "observed_behavior": "While repairing parameter mapping, the agent added a second write to run_config.json and retained the original write. The helper used exclusive creation mode, so the second write always failed. After 63 tests passed, the agent submitted three retries; all failed with FileExistsError before training. The agent acknowledged the duplicate write, added CLI coverage, and corrected it. Later results confirmed that all three fits succeeded.",
+    "target_predicate": "d.get(\"provenance_writes\",0) != 1"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/exclusive-provenance-written-twice/checker-reference-8ffb5c29/summary.json",
+    "results/exclusive-provenance-written-twice/checker-faulty-8ffb5c29/summary.json",
+    "results/exclusive-provenance-written-twice/clean-copy-correct-8ffb5c29/summary.json",
+    "results/exclusive-provenance-written-twice/clean-copy-faulty-8ffb5c29/summary.json"
+  ],
+  "symptoms": [
+    "3.1"
+  ],
+  "comparison_note": null
+}

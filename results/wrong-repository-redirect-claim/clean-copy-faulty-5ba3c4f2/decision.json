@@ -1,0 +1,4 @@
+{
+  "action": "infer-redirect-from-relative-read",
+  "verify_cwd": false
+}

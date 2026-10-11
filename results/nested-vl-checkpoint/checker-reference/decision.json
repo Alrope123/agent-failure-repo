@@ -1,0 +1,5 @@
+{
+  "model_path": "model/final",
+  "model_type": "qwen2_5_vl",
+  "action": "use-nested-checkpoint"
+}

@@ -1,0 +1,7 @@
+{
+  "knowledge_record_fields": [
+    "topic_states"
+  ],
+  "existing_builder_working": true,
+  "required_change": "Carry final learned knowledge from each block into the next while preserving scenario construction."
+}

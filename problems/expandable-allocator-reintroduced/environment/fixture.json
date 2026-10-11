@@ -1,0 +1,9 @@
+{
+  "runtime": "mock-oneCCL-XPU",
+  "diagnostic_record": {
+    "allocator": "expandable_segments:True",
+    "result": "invalid USM pointer in distributed barrier",
+    "disposition": "unsupported; removed"
+  },
+  "new_stage": "ZeRO1 conversion and training using same runtime"
+}

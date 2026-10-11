@@ -1,0 +1,3 @@
+{
+  "request": "Render one natural utterance per minimal teacher/student prompt using vLLM, HF and API backends."
+}

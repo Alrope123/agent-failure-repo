@@ -1,0 +1,12 @@
+{
+  "request": "Preserve lowercase single-letter parsing while rejecting multiple-choice ambiguity.",
+  "historical_regexes": {
+    "leading": "case insensitive ^\\s*[\\[(]?([ABC]) followed by punctuation/space",
+    "standalone": "case sensitive (?<![A-Za-z])[ABC](?![A-Za-z])"
+  },
+  "counterexamples": {
+    "a or b": "historically A, required invalid",
+    "A or B": "historically invalid",
+    "(b)": "historically B"
+  }
+}

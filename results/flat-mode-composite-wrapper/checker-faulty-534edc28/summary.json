@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "flat-mode-composite-wrapper",
+  "run_id": "checker-faulty-534edc28",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "10c73db4ebb3971ba15c4f31cb8486910ea94124c977cdce76f9b4c000328252"
+  },
+  "task_revision": "44861628dd473ff93fd823cdcd9014a67ecf261b4eb6f693bef331b6e76b81ee",
+  "judge_revision": "534edc288f21908ac245eb46eff25821e585c40f2fb2df2e5e2628f0ee99fb34",
+  "started_at": "2026-10-11T03:03:40.293406+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

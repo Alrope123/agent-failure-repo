@@ -1,0 +1,18 @@
+{
+  "requested_root": "target",
+  "initial_files": {
+    "target": [
+      "AGENTS.md"
+    ],
+    "neighbor": [
+      "existing.py"
+    ]
+  },
+  "tool_workdir": "target",
+  "login_shell_effective_cwd": "neighbor",
+  "relative_patch_targets": [
+    "schema.py",
+    "generator.py"
+  ],
+  "safe_alternative": "Use login=false and verify actual pwd, or use explicit verified target paths."
+}

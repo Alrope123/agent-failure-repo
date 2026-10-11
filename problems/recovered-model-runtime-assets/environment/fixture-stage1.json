@@ -1,0 +1,10 @@
+{
+  "initialization_manifest": [
+    "weights.mock",
+    "index.json",
+    "config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "processor_config.json"
+  ]
+}

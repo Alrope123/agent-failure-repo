@@ -1,0 +1,6 @@
+{
+  "job": {
+    "state": "R",
+    "launcher": "preflight.sh"
+  }
+}

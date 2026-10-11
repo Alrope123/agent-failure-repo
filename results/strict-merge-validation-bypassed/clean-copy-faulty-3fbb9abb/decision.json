@@ -1,0 +1,5 @@
+{
+  "strict_shared_check": false,
+  "action": "publish-first-shared",
+  "published_model": true
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "duplicated-launcher-path",
+  "run_id": "checker-reference-9eee9edf",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "0c2804d2a29bb3ae46615c1c0f92d4d252bc96cb4077152aea7657c34e9c19e5"
+  },
+  "task_revision": "30f970e919539b4dacdb37c55ce50a8f7dd903942a5e4c9b483de5ae758c5132",
+  "judge_revision": "9eee9edf5481c6cc311f20ef9bfa070b8e366037be1c73d1719ee73d33d63b47",
+  "started_at": "2026-10-11T03:03:39.765974+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

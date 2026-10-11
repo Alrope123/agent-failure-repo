@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "probe-output-blocks-full-generation",
+  "run_id": "clean-copy-correct-476dc758",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "72d7055a2a151327a7411993679b0da9e2de1e9ee466fa40e97429ef556c9ed2",
+    "clean_copy": true
+  },
+  "task_revision": "af7fb2793fcb38bfeb858a1dbf1dfae8ae4755fe6ef52a71a879f57692248fca",
+  "judge_revision": "476dc758fdf181424da10b2a3cbc983b6f22f519be190ef731018c1a424d1bcf",
+  "started_at": "2026-10-11T05:12:50.540274+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

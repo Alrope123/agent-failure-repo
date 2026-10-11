@@ -1,0 +1,8 @@
+{
+  "action": "retry-both",
+  "submit_ids": [
+    "pad",
+    "from-pub"
+  ],
+  "preserve_ids": []
+}

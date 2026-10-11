@@ -1,0 +1,6 @@
+{
+  "queue": {
+    "max_run": 2,
+    "max_queued": 5
+  }
+}

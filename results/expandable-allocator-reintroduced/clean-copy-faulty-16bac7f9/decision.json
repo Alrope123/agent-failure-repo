@@ -1,0 +1,4 @@
+{
+  "conversion_allocator": "expandable_segments:True",
+  "training_allocator": "expandable_segments:True"
+}

@@ -1,0 +1,12 @@
+{
+  "source_format": "json-array",
+  "evaluator_reader": "one-JSON-object-per-line",
+  "source_records": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}

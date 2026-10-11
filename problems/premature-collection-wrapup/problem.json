@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "premature-collection-wrapup",
+  "title": "Collection stops after screening despite required chronological review",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-10-11",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0977:12",
+    "later_decision": "S0977:205",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose the next action for the authorized collection. Write decision.json with action (continue-review or final-delivery), coverage (partial or complete), and upload (boolean).",
+    "observed_behavior": "The agent ended after eight packages while explicitly reporting that chronological review and candidate resolution were incomplete. The user challenged the omission, and the agent acknowledged that history size was not a concrete blocker.",
+    "target_predicate": "d.get('action')=='final-delivery' and d.get('coverage')=='partial'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/premature-collection-wrapup/checker-reference/summary.json",
+    "results/premature-collection-wrapup/checker-faulty/summary.json",
+    "results/premature-collection-wrapup/clean-copy-correct-d2f0ef0b/summary.json",
+    "results/premature-collection-wrapup/clean-copy-faulty-d2f0ef0b/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

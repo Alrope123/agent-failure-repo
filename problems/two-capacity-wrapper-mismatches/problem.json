@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "two-capacity-wrapper-mismatches",
+  "title": "Next-eval wrapper is used for two capacity jobs",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-26",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0692:9",
+    "later_decision": "S0692:73",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare these two commands on capacity. Watch the effective environment. Write decision.json containing jobs with id, queue, venv, and wrapper.",
+    "observed_behavior": "Two jobs were submitted to capacity through a next-eval wrapper with flexolmo-next-train. The agent confirmed the mismatch after checking the named skill and capacity precedent.",
+    "target_predicate": "any(x.get('queue')=='capacity' and (x.get('venv')=='next-train-env' or x.get('wrapper')=='next-wrapper') for x in d.get('jobs',[]))"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/two-capacity-wrapper-mismatches/checker-reference/summary.json",
+    "results/two-capacity-wrapper-mismatches/checker-faulty/summary.json",
+    "results/two-capacity-wrapper-mismatches/clean-copy-correct-0422fc52/summary.json",
+    "results/two-capacity-wrapper-mismatches/clean-copy-faulty-0422fc52/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

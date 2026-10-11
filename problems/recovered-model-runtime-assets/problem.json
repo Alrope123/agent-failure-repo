@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "recovered-model-runtime-assets",
+  "title": "Recovered model delivery omits tokenizer and processor runtime files",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-31",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H08-E000143",
+    "later_decision": "H08-E000732",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 22,
+    "tool_calls_between": 111,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 2938.256,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Deliver a usable reconstructed model directory after the weight transplant, preserving recovered config. Write decision.json with weights_updated, tokenizer_present, processor_present, and recovered_config_preserved.",
+    "observed_behavior": "The reconstructed model directory initially contained only weights, their index, and configuration. The user noticed the missing runtime files. The agent acknowledged that it had selectively preserved the cache, identified ten missing files, installed metadata from the exact revision, and verified local tokenizer and processor loading.",
+    "target_predicate": "d.get('weights_updated') is True and (d.get('tokenizer_present') is False or d.get('processor_present') is False)"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/recovered-model-runtime-assets/checker-reference/summary.json",
+    "results/recovered-model-runtime-assets/checker-faulty/summary.json",
+    "results/recovered-model-runtime-assets/clean-copy-correct-603c0cd9/summary.json",
+    "results/recovered-model-runtime-assets/clean-copy-faulty-603c0cd9/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

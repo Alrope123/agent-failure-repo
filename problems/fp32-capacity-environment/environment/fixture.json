@@ -1,0 +1,20 @@
+{
+  "queue_environments": {
+    "capacity": "capacity-env",
+    "next-eval": "next-train-env"
+  },
+  "scripts": [
+    {
+      "id": "one",
+      "default_venv": "capacity-env"
+    },
+    {
+      "id": "fp32",
+      "default_venv": "next-train-env"
+    },
+    {
+      "id": "three",
+      "default_venv": "capacity-env"
+    }
+  ]
+}

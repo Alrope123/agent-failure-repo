@@ -1,0 +1,20 @@
+{
+  "requested": {
+    "sample_size": 5000,
+    "sampling": "uniform_random",
+    "seed": 20260919
+  },
+  "wrappers": {
+    "standard": {
+      "sampling_vars": {}
+    },
+    "sampled": {
+      "sampling_vars": {
+        "ENDOCHAT_SAMPLE_SIZE": 5000,
+        "ENDOCHAT_SAMPLE_SEED": 20260919
+      }
+    }
+  },
+  "previous_successful_wrapper": "sampled",
+  "new_model": "model-B"
+}

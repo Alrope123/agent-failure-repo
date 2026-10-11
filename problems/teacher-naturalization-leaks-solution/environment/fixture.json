@@ -1,0 +1,5 @@
+{
+  "request": "Naturalize the teacher message without answering, calculations or solution hints.",
+  "observed_teacher_output": "Okay, so if I multiply the top and bottom of 9/13 by 17, I get 153/221, and if I multiply the top and bottom of 11/17 by 13, I get 143/221.",
+  "note": "Check the output invariant; do not treat prompt wording as a guarantee of runtime compliance."
+}

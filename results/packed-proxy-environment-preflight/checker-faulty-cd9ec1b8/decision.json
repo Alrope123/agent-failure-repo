@@ -1,0 +1,5 @@
+{
+  "python_bin_dir": "framework/bin",
+  "fan_out": true,
+  "all_benchmark_canary": false
+}

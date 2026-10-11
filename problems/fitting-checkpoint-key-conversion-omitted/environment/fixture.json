@@ -1,0 +1,14 @@
+{
+  "checkpoint_keys": [
+    "model.layers.0.weight",
+    "visual.weight"
+  ],
+  "model_keys": [
+    "model.language_model.layers.0.weight",
+    "model.visual.weight"
+  ],
+  "conversion_mapping": {
+    "model.layers": "model.language_model.layers",
+    "visual": "model.visual"
+  }
+}

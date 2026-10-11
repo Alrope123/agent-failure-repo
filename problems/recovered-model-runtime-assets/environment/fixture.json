@@ -1,0 +1,16 @@
+{
+  "initialization_manifest": [
+    "weights.mock",
+    "index.json",
+    "config.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "processor_config.json"
+  ],
+  "cached_subset": [
+    "weights.mock",
+    "index.json",
+    "config.json"
+  ],
+  "recovery_contract": "Reconstruct a usable model from initialization, changing expert1/router1 weights and preserving other model components."
+}

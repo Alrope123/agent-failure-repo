@@ -1,0 +1,4 @@
+{
+  "backend_initialization": "guarded_main",
+  "run_example": true
+}

@@ -1,0 +1,8 @@
+{
+  "cancel_ids": [
+    "score-a",
+    "score-b"
+  ],
+  "scoring_location": "local-reporting-host",
+  "action": "score-existing-predictions"
+}

@@ -1,0 +1,11 @@
+{
+  "earlier_design": {
+    "domain_specific_profiles": true,
+    "purpose": "control case mix",
+    "axes": [
+      "age_band",
+      "symptom_category"
+    ]
+  },
+  "scope_change": "Keep code simple; make prompts interchangeable for different domains; preserve distribution representation goal."
+}

@@ -1,0 +1,9 @@
+{
+  "action": "reconcile",
+  "submit_ids": [
+    "from-pub"
+  ],
+  "preserve_ids": [
+    "pad-existing"
+  ]
+}

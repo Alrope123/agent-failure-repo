@@ -1,0 +1,9 @@
+{
+  "diagnosis": {
+    "old_module_table": "framework-old",
+    "next_queue_module": "framework-new",
+    "export_all_failure": "Lmod pti-gpu before Python"
+  },
+  "working_venv": "next-env",
+  "wrapper_runs_module_load": true
+}

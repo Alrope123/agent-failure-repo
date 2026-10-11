@@ -1,0 +1,21 @@
+{
+  "request": "Treat PathMMU as the other two validation benchmarks, participating in proxy and full validation.",
+  "benchmarks": {
+    "rex": {
+      "stages": [
+        "proxy",
+        "validation"
+      ]
+    },
+    "endo": {
+      "stages": [
+        "proxy",
+        "validation"
+      ]
+    },
+    "pathmmu": {
+      "validation_examples": 475
+    }
+  },
+  "pathmmu_fractional_sampling": false
+}

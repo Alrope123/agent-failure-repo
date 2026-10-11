@@ -1,0 +1,5 @@
+{
+  "strict_shared_check": true,
+  "action": "report-mismatch",
+  "published_model": false
+}

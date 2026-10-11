@@ -1,0 +1,11 @@
+{
+  "last_result": {
+    "completed": false,
+    "checkpoint": 1936,
+    "total_steps": 3534
+  },
+  "command": {
+    "auto_resume": false
+  },
+  "request": "Resubmit the incomplete run from its latest complete checkpoint."
+}

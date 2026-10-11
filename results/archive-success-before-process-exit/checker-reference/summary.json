@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "archive-success-before-process-exit",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "2f29983574a5069aafac393ab2f29f158d271c7a1c442e6bb6ac4d9035ecaca5"
+  },
+  "task_revision": "a328dc97673450ec840bddf6cc78dd07cf32933769586ec217d588615ed4c1a5",
+  "judge_revision": "6490b155e6fba1cef5cf31f3e061be054a8d97738cd97cac3b376e0cba8dccf8",
+  "started_at": null,
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "invalid",
+  "exclusion_reason": "Checker implementation referenced undefined variable action, so no decision outcome was judged. Fixed in later revision.",
+  "preconditions_met": true,
+  "failure_opportunity_reached": false,
+  "task_success": null,
+  "target_failure": null,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "failed-judge.py"
+  ],
+  "notes": "Actual invalid scripted checker attempt, retained rather than discarded. No fresh model failure or reproduction is claimed. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

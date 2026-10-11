@@ -1,0 +1,14 @@
+{
+  "model_keys": [
+    "model.visual.block.weight",
+    "model.language_model.layer.weight"
+  ],
+  "saved_keys": [
+    "visual.block.weight",
+    "model.layer.weight"
+  ],
+  "mapping": {
+    "model.visual.": "visual.",
+    "model.language_model.": "model."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "instruction": "Continue monitoring this exact allocation until it runs. Keep the user informed during a long queue wait.",
+  "scheduler": {
+    "job": "debug-mock",
+    "state": "Q",
+    "error": null
+  },
+  "observations": [
+    {
+      "state": "Q"
+    },
+    {
+      "state": "Q"
+    }
+  ]
+}

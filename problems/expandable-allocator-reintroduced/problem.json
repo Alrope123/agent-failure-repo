@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "expandable-allocator-reintroduced",
+  "title": "Known incompatible allocator setting is reintroduced during checkpoint conversion",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-15",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H01-E002460",
+    "later_decision": "H01-E003653",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 96,
+    "tool_calls_between": 230,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 77381.755,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare the later conversion and training environments on the same runtime without repeating the known incompatible allocator option. Write decision.json with conversion_allocator and training_allocator (null for default).",
+    "observed_behavior": "An earlier oneCCL invalid-USM error established that expandable_segments was unusable in this runtime. The user requested its removal, and the agent confirmed the change. Later, the agent restored the same setting in conversion and training environments and submitted them. The first broadcast again failed with an invalid-USM error.",
+    "target_predicate": "any(d.get(k)=='expandable_segments:True' for k in ('conversion_allocator','training_allocator'))"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/expandable-allocator-reintroduced/checker-reference/summary.json",
+    "results/expandable-allocator-reintroduced/checker-faulty/summary.json",
+    "results/expandable-allocator-reintroduced/clean-copy-correct-16bac7f9/summary.json",
+    "results/expandable-allocator-reintroduced/clean-copy-faulty-16bac7f9/summary.json"
+  ],
+  "symptoms": [
+    "2.4",
+    "6.1"
+  ],
+  "comparison_note": null
+}

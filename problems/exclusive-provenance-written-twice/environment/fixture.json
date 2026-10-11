@@ -1,0 +1,6 @@
+{
+  "helper_open_mode": "x",
+  "path": "run_config.json",
+  "initial_write_present": true,
+  "repair_adds_second_write": true
+}

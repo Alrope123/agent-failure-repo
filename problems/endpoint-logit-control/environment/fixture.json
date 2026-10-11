@@ -1,0 +1,15 @@
+{
+  "baseline_logits": [
+    0.0,
+    0.0
+  ],
+  "endpoint_logits": [
+    1.0,
+    -1.0
+  ],
+  "initial_logit_tangent": [
+    4.0,
+    -4.0
+  ],
+  "goal": "Preserve the starting logits and initial Fisher while removing subsequent network-path bending."
+}

@@ -1,0 +1,22 @@
+{
+  "wrapper_contract": {
+    "sample_count_variable": "ROUTING_SAMPLE_COUNT",
+    "default_count": 100,
+    "suites": [
+      "rexvqa",
+      "endochat_c80",
+      "pathmmu_pubmed"
+    ]
+  },
+  "requested": {
+    "queue": "capacity",
+    "walltime": "01:00:00",
+    "samples": 100,
+    "suites": [
+      "rexvqa",
+      "endochat_c80",
+      "pathmmu_pubmed"
+    ]
+  },
+  "pbs_environment_contract": "Every -v entry must be a valid variable name or NAME=value assignment."
+}

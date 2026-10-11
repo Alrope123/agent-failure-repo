@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "mc-parser-lowercase-ambiguity-accepted",
+  "run_id": "clean-copy-faulty-296c2f60",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "9c11d2520c2b19ae5f3a71af4edfa46ca86e00dc7144eb0de3f7baaccb149fdd",
+    "clean_copy": true
+  },
+  "task_revision": "340769cfcd0fe8e0fa6a5421ed069946583acf7d6b3dcfdff8bd102aac3a15e2",
+  "judge_revision": "296c2f603429ed7aa1a76cff7fcc497eb95d5af561fe385cb92c7260ca117255",
+  "started_at": "2026-10-11T05:13:07.579764+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

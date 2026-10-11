@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "evolutionary-evaluation-jsonl-contract-missed",
+  "run_id": "checker-reference-5cbfc4aa",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "40354346b395805b6e28b49895fc332d4ea7182fab1b14ba3ca395c30cd07258"
+  },
+  "task_revision": "743f9eddfda5bfc70755498806024e9bac353965f3a63481a044454d68601473",
+  "judge_revision": "5cbfc4aa2aba03c679256c6606b684bc91a46e3fc5422d774ef9e70417a82620",
+  "started_at": "2026-10-11T03:16:33.913927+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

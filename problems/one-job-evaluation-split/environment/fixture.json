@@ -1,0 +1,17 @@
+{
+  "request": {
+    "models": [
+      "fisher"
+    ],
+    "suites": [
+      "endomc",
+      "rex",
+      "path"
+    ],
+    "total_jobs": 1,
+    "walltime_hours": 2,
+    "queue": "capacity"
+  },
+  "standard_wrapper": "one suite per job",
+  "prior_composite_pattern": "sequential standard launchers in custom PBS wrapper"
+}

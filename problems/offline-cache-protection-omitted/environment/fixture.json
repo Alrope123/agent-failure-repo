@@ -1,0 +1,21 @@
+{
+  "commands": {
+    "pathgen": {
+      "model": "same-cached-base",
+      "ranks": 12
+    },
+    "rex": {
+      "model": "same-cached-base",
+      "ranks": 12
+    },
+    "surge": {
+      "model": "same-cached-base",
+      "ranks": 12
+    }
+  },
+  "experiment": {
+    "online_load": "intermittent missing-shard failure",
+    "offline_cached_load": "passed"
+  },
+  "cache_complete": true
+}

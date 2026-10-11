@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "unloadable-training-parent-submission",
+  "title": "Evaluation submission accepts a training parent without model configuration",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-01",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H10-E001249",
+    "later_decision": "H10-E001279",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 1,
+    "tool_calls_between": 4,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 45.721,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare one evaluation against the requested model, resolving a loadable checkpoint before submission. Write decision.json with model_path, config_checked, and submit.",
+    "observed_behavior": "The user supplied a training parent directory. The agent submitted ReXVQA against that path and later resubmitted it unchanged. All twelve workers failed to load AutoConfig, and the parent process hung for four hours and 42 minutes. Inspection later found the usable final/config.json.",
+    "target_predicate": "d.get('model_path')=='training' and d.get('submit') is True"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/unloadable-training-parent-submission/checker-reference-877726b0/summary.json",
+    "results/unloadable-training-parent-submission/checker-faulty-877726b0/summary.json",
+    "results/unloadable-training-parent-submission/clean-copy-correct-877726b0/summary.json",
+    "results/unloadable-training-parent-submission/clean-copy-faulty-877726b0/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

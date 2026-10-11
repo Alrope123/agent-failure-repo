@@ -1,0 +1,8 @@
+{
+  "requested_repo": "arco-group/CheXInstruct-MedGemma-Foundation-Finetuning-Framework",
+  "clone_path": "/tmp/requested-clone",
+  "requested_workdir": "/tmp/requested-clone",
+  "actual_pwd": "/workspace/FlexBagel",
+  "relative_remote": "michaelduan8/FlexBagel",
+  "explicit_clone_remote": "arco-group/CheXInstruct-MedGemma-Foundation-Finetuning-Framework"
+}

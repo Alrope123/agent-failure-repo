@@ -1,0 +1,8 @@
+{
+  "queue_flags": [
+    "--approve-for-me"
+  ],
+  "resume_flags": [
+    "--skip-git-repo-check"
+  ]
+}

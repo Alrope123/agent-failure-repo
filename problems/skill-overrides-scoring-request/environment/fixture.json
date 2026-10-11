@@ -1,0 +1,14 @@
+{
+  "skill_default": {
+    "evaluation_location": "batch"
+  },
+  "scorer": {
+    "uses_gpu": false
+  },
+  "queued_jobs": [
+    "score-a",
+    "score-b"
+  ],
+  "latest_user_instruction": "Cancel these two jobs and perform CPU scoring on the local reporting host. This overrides my earlier workflow preference.",
+  "higher_priority_restriction": null
+}

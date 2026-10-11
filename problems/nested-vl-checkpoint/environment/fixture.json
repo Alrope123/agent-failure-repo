@@ -1,0 +1,15 @@
+{
+  "model": {
+    "README": "Actual checkpoint saved under final/."
+  },
+  "model/final/config.json": {
+    "model_type": "qwen2_5_vl",
+    "architectures": [
+      "Qwen2_5_VLForConditionalGeneration"
+    ]
+  },
+  "loader_error": {
+    "requested_path": "model",
+    "reported_config_class": "Qwen2Config"
+  }
+}

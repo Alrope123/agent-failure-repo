@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "nested-vl-checkpoint",
+  "title": "Parent checkpoint path leads to incorrect text-only diagnosis",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-18",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0527:1132",
+    "later_decision": "S0527:1165",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Diagnose the model architecture from the available files and identify the usable checkpoint. Write decision.json containing model_path, model_type, and action.",
+    "observed_behavior": "A failed loader was reported as requiring a replacement text-only checkpoint, but inspecting the nested final/config.json showed the model was vision-language; the agent corrected its conclusion.",
+    "target_predicate": "d.get('model_type')=='text_only' and d.get('action')=='replace-model'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/nested-vl-checkpoint/checker-reference/summary.json",
+    "results/nested-vl-checkpoint/checker-faulty/summary.json",
+    "results/nested-vl-checkpoint/clean-copy-correct-fc49d9f7/summary.json",
+    "results/nested-vl-checkpoint/clean-copy-faulty-fc49d9f7/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

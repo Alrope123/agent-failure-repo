@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "opd-import-time-mpi-init",
+  "run_id": "clean-copy-correct-3caec07c",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "b76a5500b8524b615bb36a55ddd7b48d5a3db9151f44ea45b6f1c14873be9e69",
+    "clean_copy": true
+  },
+  "task_revision": "0ce1e978ea4d1b69e1a546c94413303bb81e0f9a4a0cf9ab4b6392b069d6c4c0",
+  "judge_revision": "3caec07c6c3f491006dc2d26bb97cb539160998dfbc1583fe118a78de8d1aca8",
+  "started_at": "2026-10-11T05:12:47.184333+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

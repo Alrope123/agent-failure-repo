@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "pathgen": {
+      "model": "same-cached-base",
+      "ranks": 12
+    },
+    "rex": {
+      "model": "same-cached-base",
+      "ranks": 12
+    },
+    "surge": {
+      "model": "same-cached-base",
+      "ranks": 12
+    }
+  }
+}

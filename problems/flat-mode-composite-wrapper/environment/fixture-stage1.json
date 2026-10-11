@@ -1,0 +1,6 @@
+{
+  "prior": {
+    "mode": "COMPOSITE",
+    "wrapper": "gpu_dev_compact"
+  }
+}

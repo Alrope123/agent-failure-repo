@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "id": "task-a",
+      "queue": "capacity",
+      "dependency": "existing"
+    },
+    {
+      "id": "task-b",
+      "queue": "capacity",
+      "dependency": "task-a"
+    }
+  ]
+}

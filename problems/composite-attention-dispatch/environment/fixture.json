@@ -1,0 +1,6 @@
+{
+  "model_type": "qwen2_5_vl",
+  "default_text_backend": "sdpa",
+  "dispatch_rule": "String backend propagates to every submodel. Dictionary empty key affects wrapper only; explicit text_config key controls text.",
+  "flex_contract": "Keep existing sdpa for flex architecture."
+}

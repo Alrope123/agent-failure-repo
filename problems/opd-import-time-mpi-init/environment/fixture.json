@@ -1,0 +1,5 @@
+{
+  "cpu_tests_import": "trainer helpers",
+  "mpi_import_side_effect": "initializes MPI; aborts on login host",
+  "distributed_setup": "called only in scheduled training"
+}

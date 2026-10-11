@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "repeated-malformed-tool-programs",
+  "title": "Five successive malformed orchestration programs fail before inspection",
+  "status": "incident",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-14",
+    "evidence_note": "Selected sanitized source H01 excerpts and tool SyntaxError results are in evidence/README.md. Five failed calls are observed; the record does not establish persistent code damage, hidden reasoning, model identity or a long-context cause."
+  },
+  "horizon": {
+    "earlier_event": "H01:L209 submits prose to the JavaScript orchestration tool and L211 returns SyntaxError.",
+    "later_decision": "H01:L229 submits another malformed JavaScript program after four previous syntax failures.",
+    "intervening_work": "Three further malformed calls at L214, L219 and L224 fail before executing any nested inspection.",
+    "mechanism": "Repeated invalid orchestration syntax; a local retry episode, not established instruction forgetting.",
+    "assistant_turns_between": 0,
+    "tool_calls_between": 3,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 15.679,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Submit syntactically valid orchestration JavaScript that invokes the inspection tool for the authorized schema/configuration task.",
+    "observed_behavior": "Five consecutive submitted programs fail parsing; no nested inspection executes in any of them. Valid inspection resumes at H01:L239/L241.",
+    "target_predicate": "With the expected JavaScript exec interface exposed, a submitted orchestration program fails parsing before the requested nested inspection runs. Repeated execution of malformed syntax is the incident; unrelated environment errors do not count."
+  },
+  "commands": {
+    "setup": null,
+    "run_agent": null,
+    "judge": null,
+    "check_reference": null,
+    "control": null
+  },
+  "result_records": [],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": "Not run. A future comparison could preserve the schema-edit task while adding an immediate reminder to submit executable JavaScript rather than prose or incomplete expressions; no frequency or causal claim is made."
+}

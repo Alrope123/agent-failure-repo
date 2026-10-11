@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "watcher-cli-contract-unvalidated",
+  "run_id": "checker-reference-2700a926",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "43d2fece3ec5cde25be5f1b2096f41ee39a0a0fb3f4c612ee866a64d8ba9fe6b"
+  },
+  "task_revision": "b01b5cbb7100c78d9a1a95f07466dc2871124ef74422ee7198f380675bdb781c",
+  "judge_revision": "2700a926f1a4a2aa9be74d9ba822b05bfdff8834dcd321f0f89f3b68a515899e",
+  "started_at": "2026-10-11T03:10:26.714431+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

@@ -1,0 +1,3 @@
+{
+  "request": "Preserve lowercase single-letter parsing while rejecting multiple-choice ambiguity."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "offline-cache-protection-omitted",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "078ebe41dba14d69ba8b88c47e01c53c512aa32bb225a7558031d774a76b1eaa"
+  },
+  "task_revision": "8dace902dc1dced85faa7d6fe4d1af712484d7a48b96301c3173679d47c4bd8a",
+  "judge_revision": "3cab252e167ec5e2e61ce9f519e4ca0f056910fa76ffeeecaa08db5b0e2be3d6",
+  "started_at": "2026-10-11T02:51:33.707256+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Correct reference. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

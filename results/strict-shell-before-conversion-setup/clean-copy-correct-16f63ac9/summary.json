@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "strict-shell-before-conversion-setup",
+  "run_id": "clean-copy-correct-16f63ac9",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "d26e4da730cb614cb41854b30154d492ff79a1bcc2bf9cc34cba82e2d8747706",
+    "clean_copy": true
+  },
+  "task_revision": "559882ffeb841b48c4d97420dcd098b1e6bdfc3457192895fbc9a08daa7a592b",
+  "judge_revision": "16f63ac9f39e54fff17def5fc8607d74eef2d15616bbe175a3058a144929207a",
+  "started_at": "2026-10-11T05:12:55.792203+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

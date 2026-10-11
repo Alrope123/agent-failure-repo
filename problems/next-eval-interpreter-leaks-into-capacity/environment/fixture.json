@@ -1,0 +1,11 @@
+{
+  "queue": "capacity",
+  "framework": "2025.3.1",
+  "available_interpreters": [
+    "flexolmo"
+  ],
+  "next_train_target": "2026.1.0",
+  "shared_launcher": "commands/pathgen_flex_btx_from_pub.sh",
+  "prior_capacity_exit": 0,
+  "later_capacity_launch_error": "No such file or directory"
+}

@@ -1,0 +1,6 @@
+{
+  "model_keys": [
+    "model.visual.block.weight",
+    "model.language_model.layer.weight"
+  ]
+}

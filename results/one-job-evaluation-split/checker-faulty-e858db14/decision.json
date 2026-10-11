@@ -1,0 +1,14 @@
+{
+  "total_jobs": 3,
+  "suites_per_job": [
+    [
+      "endomc"
+    ],
+    [
+      "rex"
+    ],
+    [
+      "path"
+    ]
+  ]
+}

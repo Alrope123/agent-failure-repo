@@ -1,0 +1,10 @@
+{
+  "completed_run": {
+    "components": [
+      "vision_attention"
+    ],
+    "decoder_results": false
+  },
+  "latest_request": "Do we have decoder results for this run?",
+  "existing_authorization": "Compute vision_attention on the matched records"
+}

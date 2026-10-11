@@ -1,0 +1,26 @@
+{
+  "queue_environments": {
+    "capacity": "capacity-env",
+    "next-eval": "next-train-env"
+  },
+  "wrappers": {
+    "capacity-wrapper": {
+      "queue": "capacity",
+      "venv": "capacity-env"
+    },
+    "next-wrapper": {
+      "queue": "next-eval",
+      "venv": "next-train-env"
+    }
+  },
+  "scripts": [
+    {
+      "id": "small",
+      "default_venv": "next-train-env"
+    },
+    {
+      "id": "large",
+      "default_venv": "next-train-env"
+    }
+  ]
+}

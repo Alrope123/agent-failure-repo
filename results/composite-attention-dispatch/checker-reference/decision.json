@@ -1,0 +1,5 @@
+{
+  "attention_implementation": "xpu_sdpa",
+  "effective_text_backend": "xpu_sdpa",
+  "flex_backend": "sdpa"
+}

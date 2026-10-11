@@ -1,0 +1,5 @@
+{
+  "output": "outputs/rex-full.jsonl",
+  "overwrite": false,
+  "submit": true
+}

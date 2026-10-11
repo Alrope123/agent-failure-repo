@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "pathmmu-omitted-from-stage2-evaluation",
+  "run_id": "checker-faulty-2dd21c5e",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "0ad3e64af65e16258efe43ec77db3d1abbb44849cea999798648ebb4ba27831a"
+  },
+  "task_revision": "579e174569dfd561ec552f0f3e5d5efe5611d34e7a5054f4642de8b09e79618a",
+  "judge_revision": "2dd21c5e8da490828a520a2ec7f6c9ad93d818860fcdfd29e0b271377942301a",
+  "started_at": "2026-10-11T03:10:24.409799+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

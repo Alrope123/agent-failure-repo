@@ -1,0 +1,6 @@
+{
+  "prior_probe": {
+    "run_id": "shared-probe",
+    "checkpoint_step": 10
+  }
+}

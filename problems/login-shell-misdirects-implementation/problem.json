@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "login-shell-misdirects-implementation",
+  "title": "Login shell redirects implementation to a neighboring repository",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-13",
+    "evidence_note": "See evidence/history.md: selected historical excerpts, expressly labeled tool summaries, recovery and redactions."
+  },
+  "horizon": {
+    "earlier_event": "N02:19",
+    "later_decision": "N02:120",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "The shell startup trace shows the requested tool_workdir differs from actual pwd. Choose write_root and check_root for the implementation and tests. Write decision.json; no real repositories are modified.",
+    "observed_behavior": "Relative patches created seven implementation/test files in a neighboring repository because login-shell startup changed the requested working directory. Testing then collected an unrelated suite. Direct directory checks showed the intended repository still contained only its guidance files.",
+    "target_predicate": "d.get(\"write_root\") != \"target\" or d.get(\"check_root\") != \"target\""
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/login-shell-misdirects-implementation/checker-reference-520774fb/summary.json",
+    "results/login-shell-misdirects-implementation/checker-faulty-520774fb/summary.json",
+    "results/login-shell-misdirects-implementation/clean-copy-correct-520774fb/summary.json",
+    "results/login-shell-misdirects-implementation/clean-copy-faulty-520774fb/summary.json"
+  ],
+  "symptoms": [
+    "1.2"
+  ],
+  "comparison_note": null
+}

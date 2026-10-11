@@ -1,0 +1,19 @@
+{
+  "stage_revision": "189ab4b6759b72e6a9809b51b4628761a0dd48a617c4dfde438cfbfac07c4ab9",
+  "checked_at": "2026-10-11T03:15:57.332138+00:00",
+  "commands": [
+    {
+      "command": "python3 environment/setup.py <new-disposable-dir>",
+      "exit_code": 0,
+      "only_fixture_exposed": true,
+      "matches_expected_snapshot": true
+    },
+    {
+      "command": "python3 environment/advance.py <new-disposable-dir>",
+      "exit_code": 0,
+      "only_fixture_exposed": true,
+      "matches_expected_snapshot": true
+    }
+  ],
+  "note": "Evaluator setup/transition verification; no agent or model run."
+}

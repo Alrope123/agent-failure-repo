@@ -1,0 +1,7 @@
+{
+  "result_dir_exists": true,
+  "success_marker": false,
+  "metrics_valid": false,
+  "subset_file": true,
+  "underlying_runner": "refuses every existing result dir"
+}

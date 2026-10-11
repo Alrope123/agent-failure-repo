@@ -1,0 +1,4 @@
+{
+  "shell_options": "-euo pipefail",
+  "module_init_before_nounset": false
+}

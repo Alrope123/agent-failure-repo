@@ -1,0 +1,14 @@
+{
+  "watcher": {
+    "state": "Q",
+    "updated": "02:13:00"
+  },
+  "now": "03:40:04",
+  "scheduler": {
+    "state": "F",
+    "start": "02:40:04",
+    "finish": "03:11:50",
+    "exit_status": 0
+  },
+  "artifacts": "nine valid result files"
+}

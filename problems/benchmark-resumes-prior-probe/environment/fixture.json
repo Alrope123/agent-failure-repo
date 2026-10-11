@@ -1,0 +1,11 @@
+{
+  "prior_probe": {
+    "run_id": "shared-probe",
+    "checkpoint_step": 10
+  },
+  "trainer": {
+    "auto_resume": true,
+    "max_steps": 10
+  },
+  "next_probe": "FLAT throughput comparison with10newsteps"
+}

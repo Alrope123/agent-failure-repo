@@ -1,0 +1,4 @@
+{
+  "direction": "endpoint_difference",
+  "preserves_initial_fisher": true
+}

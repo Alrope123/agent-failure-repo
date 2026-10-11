@@ -1,0 +1,8 @@
+{
+  "domain_prompts": [
+    "radiology",
+    "pathology"
+  ],
+  "sampled_profiles": true,
+  "profile_in_prompt": true
+}

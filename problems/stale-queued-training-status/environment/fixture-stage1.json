@@ -1,0 +1,7 @@
+{
+  "watcher": {
+    "heartbeat": "old",
+    "rex": "Q",
+    "surge": "Q"
+  }
+}

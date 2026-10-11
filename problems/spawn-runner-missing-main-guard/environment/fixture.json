@@ -1,0 +1,5 @@
+{
+  "worker_start_method": "spawn",
+  "existing_runner": "def main():\n    start_backend()\n\nif __name__ == \"__main__\":\n    main()",
+  "new_runner_initially_missing": true
+}

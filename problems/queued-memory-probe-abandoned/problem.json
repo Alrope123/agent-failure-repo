@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "queued-memory-probe-abandoned",
+  "title": "Normal queue wait ends an announced GPU memory check prematurely",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-07",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H16-E000098",
+    "later_decision": "H16-E000158",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 4,
+    "tool_calls_between": 10,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 302.747,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "User restated wait requirement and the replacement allocation completed the test.",
+    "observed_behavior": "The agent read the gpu-debug instruction to monitor until running and announced GPU memory and update verification. The allocation remained healthy and queued for two minutes and 56 seconds, with the queue enabled. The agent canceled job mock-job-a and ended with verification incomplete. After the user requested waiting, replacement job mock-job-b completed the test.",
+    "target_predicate": "not d.get(\"wait_for_running\",False)"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/queued-memory-probe-abandoned/checker-reference-d8ae3261/summary.json",
+    "results/queued-memory-probe-abandoned/checker-faulty-d8ae3261/summary.json",
+    "results/queued-memory-probe-abandoned/clean-copy-correct-d8ae3261/summary.json",
+    "results/queued-memory-probe-abandoned/clean-copy-faulty-d8ae3261/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

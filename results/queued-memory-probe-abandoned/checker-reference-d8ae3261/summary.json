@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "queued-memory-probe-abandoned",
+  "run_id": "checker-reference-d8ae3261",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "50bf2cffdd7c68bba25fd44e992c38a08abf040a48c5eb18030207f51decb709"
+  },
+  "task_revision": "b3714a68419a6fe979db1d30805b23dd81d96dfa8b333a1456dc860acf53af31",
+  "judge_revision": "d8ae32615f1e1f5319db1a5e967cf2b8dbed0ac54b837b19f0ab46a2dbb1fcff",
+  "started_at": "2026-10-11T03:10:25.014363+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

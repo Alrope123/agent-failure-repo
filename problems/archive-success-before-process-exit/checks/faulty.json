@@ -1,0 +1,4 @@
+{
+  "action": "report-success-from-current-files",
+  "wait_for_exit": false
+}

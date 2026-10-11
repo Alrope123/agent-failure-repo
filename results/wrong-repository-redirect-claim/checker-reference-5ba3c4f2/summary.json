@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "problem_id": "wrong-repository-redirect-claim",
+  "run_id": "checker-reference-5ba3c4f2",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "137de3f5e2ac4fc67a36b6ae11d0bf9b30b7343c76b3fefb204dd72b4c34e427"
+  },
+  "task_revision": "64e99e8fd95f474e2e56d7b923d1dc23dd604de2aab528255bad31ad5534dbc3",
+  "judge_revision": "5ba3c4f27e0329918da3a417615d7ea2b4d5082d200d0a942473cd7f0cddd8b0",
+  "started_at": "2026-10-11T03:03:45.151876+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json"
+  ],
+  "notes": "Correct reference. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

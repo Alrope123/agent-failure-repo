@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "text-only-ddp-unused-branches",
+  "run_id": "clean-copy-faulty-4968484c",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "53b249aee76c67cbc0253ae158cdc7331e8966cc0169a8528f7589d61cfb032a",
+    "clean_copy": true
+  },
+  "task_revision": "5136a6e0a734ad6c60309cf15f4294cb80f41098750df73f0f96248aa019f17c",
+  "judge_revision": "4968484ca744a68d529459912651f21af8696fdcaa85d395c65aec7d77d1e14d",
+  "started_at": "2026-10-11T05:12:58.269783+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

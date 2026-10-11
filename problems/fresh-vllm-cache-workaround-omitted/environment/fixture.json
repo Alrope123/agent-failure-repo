@@ -1,0 +1,6 @@
+{
+  "request": "Launch Aurora vLLM using a fresh cache root.",
+  "cache_root": "artifacts/smoke/vllm-cache",
+  "cache_exists": false,
+  "documented_precondition": "Prepopulate modelinfos before constructing LLM each time the cache root changes."
+}

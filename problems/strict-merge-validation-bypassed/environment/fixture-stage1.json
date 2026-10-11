@@ -1,0 +1,16 @@
+{
+  "request": {
+    "strict_shared_check": true,
+    "produce_model": true
+  },
+  "sources": {
+    "a_shared": [
+      1,
+      2
+    ],
+    "b_shared": [
+      1,
+      3
+    ]
+  }
+}

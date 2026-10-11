@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "maximum-walltime-instead-of-estimate",
+  "title": "Restart requests queue maximum rather than estimating remaining training",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-07",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H16-E000718",
+    "later_decision": "H16-E000753",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 3,
+    "tool_calls_between": 3,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 125.177,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Remaining work can be estimated from actual throughput; queue maximum is not an estimate.",
+    "observed_behavior": "After 439 updates and a hang, the user requested cancellation and resubmission with an appropriate walltime. The agent chose the queue maximum of 168 hours and submitted it. It later acknowledged that the remaining 1,162 updates were expected to take 46\u201350 hours. After the user objected, it replaced the request with 60 hours.",
+    "target_predicate": "d.get(\"requested_hours\",0)>100"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/maximum-walltime-instead-of-estimate/checker-reference-4861d4e3/summary.json",
+    "results/maximum-walltime-instead-of-estimate/checker-faulty-4861d4e3/summary.json",
+    "results/maximum-walltime-instead-of-estimate/clean-copy-correct-4861d4e3/summary.json",
+    "results/maximum-walltime-instead-of-estimate/clean-copy-faulty-4861d4e3/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

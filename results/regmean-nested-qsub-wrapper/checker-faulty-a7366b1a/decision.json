@@ -1,0 +1,8 @@
+{
+  "qsub_args": [
+    "qsub",
+    "-q",
+    "next-eval",
+    "submit/job.sh"
+  ]
+}

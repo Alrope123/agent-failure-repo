@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "resume-batch-state-mismatch",
+  "title": "Changing resume accumulation while saved microbatch overrides CLI trains zero steps",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-15",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H01-E000773",
+    "later_decision": "H01-E000802",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 3,
+    "tool_calls_between": 5,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 137.234,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Continue training with a microbatch of 1 while preserving original effective batch and progress. Keep original checkpoint immutable and write decision.json with cli_batch, accumulation, derived_state_batch, original_state_batch, global_batch, and max_steps.",
+    "observed_behavior": "The agent changed the CLI microbatch from 2 to 1 and accumulation from 8 to 16 but left saved train_batch_size at 2. Trainer restored the saved value, calculated 3,658 total steps below the restored step 4,380, and exited successfully without training. The agent inspected the restore code and acknowledged the error.",
+    "target_predicate": "d.get('derived_state_batch')==2 and d.get('accumulation')==16"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/resume-batch-state-mismatch/checker-reference/summary.json",
+    "results/resume-batch-state-mismatch/checker-faulty/summary.json",
+    "results/resume-batch-state-mismatch/clean-copy-correct-76164f65/summary.json",
+    "results/resume-batch-state-mismatch/clean-copy-faulty-76164f65/summary.json"
+  ],
+  "symptoms": [
+    "1.2",
+    "other"
+  ],
+  "comparison_note": null
+}

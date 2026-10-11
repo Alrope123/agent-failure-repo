@@ -1,0 +1,20 @@
+{
+  "watcher": {
+    "heartbeat": "old",
+    "rex": "Q",
+    "surge": "Q"
+  },
+  "live_queue": [],
+  "scheduler_history": {
+    "rex": {
+      "state": "F",
+      "exit_status": 143,
+      "latest_step": 1148
+    },
+    "surge": {
+      "state": "F",
+      "exit_status": 143,
+      "latest_step": 1942
+    }
+  }
+}

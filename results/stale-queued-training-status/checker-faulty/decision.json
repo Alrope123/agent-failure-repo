@@ -1,0 +1,5 @@
+{
+  "rex": "queued",
+  "surge": "queued",
+  "authority": "stale-watcher"
+}

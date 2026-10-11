@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "benchmark-resumes-prior-probe",
+  "run_id": "clean-copy-faulty-c306eded",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "2b5a282a987e1355cfdf27fd76a517e685606890a686178c5bde2a8abf8aaf5c",
+    "clean_copy": true
+  },
+  "task_revision": "21ba86d922131b2eafdec3f27ad538c790869a6cebd6e661d859e57b3738535d",
+  "judge_revision": "c306eded0694e3a3f8c5ceda9bbfa9977803559918910a5c5934a741f8466d48",
+  "started_at": "2026-10-11T05:12:38.609662+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

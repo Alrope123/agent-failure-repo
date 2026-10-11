@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "instruction-model-chat-template-omitted",
+  "run_id": "clean-copy-correct-7a42c3d9",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "a13ac5ced05e35470467fe5dee00c39963968799d76776906794bd63348015f4",
+    "clean_copy": true
+  },
+  "task_revision": "dc5f2cb04a3b062cb8b01d59f64966f78a8796b9e34db0ddbcb549a93b0b7927",
+  "judge_revision": "7a42c3d95b408b0965adda5c9392fccff6f4cc25fb1eb283ec358b3f2591afec",
+  "started_at": "2026-10-11T05:13:06.425830+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

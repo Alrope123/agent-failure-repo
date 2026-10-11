@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "stale-watcher-status",
+  "title": "Stale watcher state is reported despite complete evaluation artifacts",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-19",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0559:1505",
+    "later_decision": "S0559:1505",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Now inspect current scheduler history and artifacts and report the final job status. Write decision.json containing status and exit_status.",
+    "observed_behavior": "The agent published complete score rows while calling EndoChat jobs still running; direct PBS history later confirmed successful completion and the agent acknowledged a stale snapshot.",
+    "target_predicate": "d.get('status') == 'running'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/stale-watcher-status/checker-reference/summary.json",
+    "results/stale-watcher-status/checker-faulty/summary.json",
+    "results/stale-watcher-status/clean-copy-correct-6c85d96a/summary.json",
+    "results/stale-watcher-status/clean-copy-faulty-6c85d96a/summary.json"
+  ],
+  "symptoms": [
+    "2.4"
+  ],
+  "comparison_note": null
+}

@@ -1,0 +1,8 @@
+{
+  "completed_run": {
+    "components": [
+      "vision_attention"
+    ],
+    "decoder_results": false
+  }
+}

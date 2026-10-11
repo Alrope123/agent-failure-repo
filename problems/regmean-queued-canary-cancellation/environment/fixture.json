@@ -1,0 +1,8 @@
+{
+  "job_state": "Q",
+  "holds": "n",
+  "eligible_seconds": 357,
+  "unrelated_debug_job": "R",
+  "user_stop": false,
+  "protocol": "continue monitoring until exact job runs; clean up after work"
+}

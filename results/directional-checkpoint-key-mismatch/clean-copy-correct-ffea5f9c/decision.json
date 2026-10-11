@@ -1,0 +1,7 @@
+{
+  "lookup": {
+    "model.visual.block.weight": "visual.block.weight",
+    "model.language_model.layer.weight": "model.layer.weight"
+  },
+  "complete": true
+}

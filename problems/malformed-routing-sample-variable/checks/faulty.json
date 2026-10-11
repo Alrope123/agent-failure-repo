@@ -1,0 +1,11 @@
+{
+  "environment_entries": [
+    "ROUTING_SAMPLE?"
+  ],
+  "suites": [
+    "rexvqa",
+    "endochat_c80",
+    "pathmmu_pubmed"
+  ],
+  "submit": true
+}

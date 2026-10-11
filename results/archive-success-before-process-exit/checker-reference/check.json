@@ -1,0 +1,9 @@
+{
+  "command": "python3 checks/judge.py <disposable-dir>/decision.json",
+  "setup_exit": 0,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "NameError: name 'action' is not defined (judge.py line10)",
+  "input_kind": "correct reference",
+  "note": "Actual failed checker-development attempt captured from check_packages assertion; no model or agent execution. Exact original start timestamp not retained."
+}

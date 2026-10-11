@@ -1,0 +1,8 @@
+{
+  "requested_model": "research/model-v2",
+  "cached_files": [
+    "config.json",
+    "model.safetensors.index.json"
+  ],
+  "cached_weight_shards": 0
+}

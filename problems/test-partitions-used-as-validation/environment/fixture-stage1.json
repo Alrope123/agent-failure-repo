@@ -1,0 +1,3 @@
+{
+  "contract": "Use held-out validation for tuning; reserve separate test partitions for final evaluation."
+}

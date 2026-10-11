@@ -1,0 +1,5 @@
+{
+  "module_init_reads_unset": "ZSH_EVAL_CONTEXT",
+  "existing_launcher_options": "-euo pipefail",
+  "module_init_position": "after shell options"
+}

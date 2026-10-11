@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "endpoint-logit-control",
+  "run_id": "clean-copy-correct-9e72c0f4",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "d80b3be68f18d329d075d50ba51b2dab62eebf15b00d4d26208c1d128123902c",
+    "clean_copy": true
+  },
+  "task_revision": "6e3792d2b2bea5699947a98da9cd2b41a55b9ca550ff30da7c28ff86341b1f31",
+  "judge_revision": "9e72c0f43c201b70d561ce4cbc1909d9150d32038c115b14a86ce66baa7e5d6a",
+  "started_at": "2026-10-11T05:12:40.984424+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

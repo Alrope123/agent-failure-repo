@@ -1,0 +1,19 @@
+{
+  "requirements": {
+    "chronological_review": "all available authorized sources",
+    "candidate_dispositions": "every candidate",
+    "continue_across_chunks": true
+  },
+  "progress": {
+    "machine_screening": "complete",
+    "semantic_sources_reviewed": 8,
+    "semantic_sources_total": 100,
+    "pending_candidates": 12
+  },
+  "capabilities": {
+    "history_accessible": true,
+    "persistent_notes": true,
+    "context_compaction": true
+  },
+  "blocker": null
+}

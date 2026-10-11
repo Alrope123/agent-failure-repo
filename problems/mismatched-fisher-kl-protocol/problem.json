@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "mismatched-fisher-kl-protocol",
+  "title": "Fisher calibration interpretation compares different model precision and record sets",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-10-05",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0813:3703",
+    "later_decision": "S0813:5350",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose a comparison for evaluating the same-prompts local Fisher identity. Existing heterogeneous runs may be reported descriptively with their caveats. Write decision.json with action and caveat.",
+    "observed_behavior": "The proposed comparison required Fisher and small-step KL on matching prompts. The implementation used 10,000 BF16 records for Fisher and 256 FP32 records for KL, then divided the results into calibration ratios. Matching the records changed the Endo vision-attention ratio from 0.171 to 0.817. Precision remained a separate confound.",
+    "target_predicate": "d.get('action')=='compare-unmatched-runs'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/mismatched-fisher-kl-protocol/checker-reference/summary.json",
+    "results/mismatched-fisher-kl-protocol/checker-faulty/summary.json",
+    "results/mismatched-fisher-kl-protocol/checker-v2-reference/summary.json",
+    "results/mismatched-fisher-kl-protocol/checker-v2-faulty/summary.json",
+    "results/mismatched-fisher-kl-protocol/clean-copy-correct-f9e02063/summary.json",
+    "results/mismatched-fisher-kl-protocol/clean-copy-faulty-f9e02063/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

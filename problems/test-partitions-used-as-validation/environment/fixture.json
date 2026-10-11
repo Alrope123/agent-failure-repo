@@ -1,0 +1,16 @@
+{
+  "contract": "Use held-out validation for tuning; reserve separate test partitions for final evaluation.",
+  "available_partitions": {
+    "pdv": "PubMed_val",
+    "clsv": "PathCLS_val",
+    "eduv": "EduContent_val",
+    "pdt": "PubMed_test",
+    "clst": "PathCLS_test",
+    "edut": "EduContent_test"
+  },
+  "launcher_defaults": [
+    "pdt",
+    "clst",
+    "edut"
+  ]
+}

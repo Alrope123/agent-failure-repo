@@ -1,0 +1,16 @@
+{
+  "queue": {
+    "max_run": 2,
+    "max_queued": 5
+  },
+  "existing_jobs": [
+    {
+      "id": "existing",
+      "state": "R"
+    }
+  ],
+  "previous_rejection": {
+    "running_at_rejection": 2,
+    "reason": "maximum running jobs exceeded"
+  }
+}

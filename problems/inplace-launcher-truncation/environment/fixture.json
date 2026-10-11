@@ -1,0 +1,21 @@
+{
+  "earlier_launcher": {
+    "bytes": 840,
+    "contains_training_command": true,
+    "tracked": false
+  },
+  "edit_result": {
+    "exit_code": 255,
+    "stderr": "Illegal division by zero"
+  },
+  "current_launcher": {
+    "bytes": 0,
+    "contains_training_command": false
+  },
+  "bash_n": {
+    "exit_code": 0
+  },
+  "git_diff": {
+    "stdout": ""
+  }
+}

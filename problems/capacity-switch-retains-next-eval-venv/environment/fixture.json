@@ -1,0 +1,12 @@
+{
+  "launcher": {
+    "python": "${FLEXBAGEL_PYTHON}"
+  },
+  "current_queue": "capacity",
+  "previous_queue": "next-eval",
+  "queue_envs": {
+    "next-eval": "venvs/next-train",
+    "capacity": "venvs/capacity"
+  },
+  "walltime_hours": 12
+}

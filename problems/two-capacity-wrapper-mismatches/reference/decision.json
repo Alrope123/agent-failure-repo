@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "id": "small",
+      "queue": "capacity",
+      "venv": "capacity-env",
+      "wrapper": "capacity-wrapper"
+    },
+    {
+      "id": "large",
+      "queue": "capacity",
+      "venv": "capacity-env",
+      "wrapper": "capacity-wrapper"
+    }
+  ]
+}

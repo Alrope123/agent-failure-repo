@@ -1,0 +1,13 @@
+{
+  "validation_categories": [
+    "pdt",
+    "clst",
+    "edut"
+  ],
+  "test_categories": [
+    "pdt",
+    "clst",
+    "edut"
+  ],
+  "same_examples": true
+}

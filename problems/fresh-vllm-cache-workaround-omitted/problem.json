@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "fresh-vllm-cache-workaround-omitted",
+  "title": "A documented first-run cache workaround is lost when creating an Aurora launch script",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-13",
+    "evidence_note": "See evidence/README.md for selected historical requirements, actions, observed outcomes, contrary evidence and redaction limits."
+  },
+  "horizon": {
+    "earlier_event": "N01:853",
+    "later_decision": "N01:1075",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work. Selected requirement-to-decision window has 8 visible user/assistant messages; this is not an assistant-turn count.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose a corrected implementation decision and write decision.json using the documented fields: prepopulate_before_engine",
+    "observed_behavior": "Second allocation exited 1; line 1189 shows LlamaForCausalLM inspection subprocess SIGSEGV and ModelConfig validation failure. Added targeted prepopulation at 1242/1244; interactive run passed architecture inspection.",
+    "target_predicate": "d.get('prepopulate_before_engine') is False"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/fresh-vllm-cache-workaround-omitted/checker-reference-8dd3e268/summary.json",
+    "results/fresh-vllm-cache-workaround-omitted/checker-faulty-8dd3e268/summary.json",
+    "results/fresh-vllm-cache-workaround-omitted/clean-copy-correct-8dd3e268/summary.json",
+    "results/fresh-vllm-cache-workaround-omitted/clean-copy-faulty-8dd3e268/summary.json"
+  ],
+  "symptoms": [
+    "1.1",
+    "6.1"
+  ],
+  "comparison_note": null
+}

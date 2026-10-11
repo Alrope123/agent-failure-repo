@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "teacher-naturalization-leaks-solution",
+  "title": "Teacher naturalization violates the diagnostic-only classroom invariant",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-13",
+    "evidence_note": "See evidence/README.md for selected historical requirements, actions, observed outcomes, contrary evidence and redaction limits."
+  },
+  "horizon": {
+    "earlier_event": "N01:403",
+    "later_decision": "N01:765",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work. Selected requirement-to-decision window has 38 visible user/assistant messages; this is not an assistant-turn count.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose a corrected implementation decision and write decision.json using the documented fields: diagnostic_only, direct_no_solution_instruction",
+    "observed_behavior": "After chat-template repair, line 1420 teacher output calculates 153/221 and 143/221 rather than asking a diagnostic question. A more direct teacher instruction at 1429 yielded diagnostic-only examples at 1445/1506.",
+    "target_predicate": "d.get('diagnostic_only') is False"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/teacher-naturalization-leaks-solution/checker-reference-1a3b0063/summary.json",
+    "results/teacher-naturalization-leaks-solution/checker-faulty-1a3b0063/summary.json",
+    "results/teacher-naturalization-leaks-solution/clean-copy-correct-1a3b0063/summary.json",
+    "results/teacher-naturalization-leaks-solution/clean-copy-faulty-1a3b0063/summary.json"
+  ],
+  "symptoms": [
+    "1.1"
+  ],
+  "comparison_note": null
+}

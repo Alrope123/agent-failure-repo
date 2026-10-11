@@ -1,0 +1,11 @@
+{
+  "workspace_is_git": false,
+  "queue_mutually_exclusive_flags": [
+    "--sandbox",
+    "--approve-for-me"
+  ],
+  "job_state": "F",
+  "job_exit": 0,
+  "mock_delivery_tests_pass": true,
+  "live_delivery_accepted": false
+}

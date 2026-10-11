@@ -1,0 +1,11 @@
+{
+  "wrapper_contract": {
+    "sample_count_variable": "ROUTING_SAMPLE_COUNT",
+    "default_count": 100,
+    "suites": [
+      "rexvqa",
+      "endochat_c80",
+      "pathmmu_pubmed"
+    ]
+  }
+}

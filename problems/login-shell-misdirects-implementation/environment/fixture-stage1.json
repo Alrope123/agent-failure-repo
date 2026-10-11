@@ -1,0 +1,11 @@
+{
+  "requested_root": "target",
+  "initial_files": {
+    "target": [
+      "AGENTS.md"
+    ],
+    "neighbor": [
+      "existing.py"
+    ]
+  }
+}

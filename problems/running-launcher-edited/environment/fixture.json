@@ -1,0 +1,11 @@
+{
+  "job": {
+    "state": "R",
+    "launcher": "preflight.sh"
+  },
+  "last_poll": {
+    "stdout": "",
+    "exit_status": null
+  },
+  "request": "Optimize metadata ranking for a replacement run; preserve the active job."
+}

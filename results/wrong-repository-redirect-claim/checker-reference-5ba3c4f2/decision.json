@@ -1,0 +1,4 @@
+{
+  "action": "inspect-explicit-clone",
+  "verify_cwd": true
+}

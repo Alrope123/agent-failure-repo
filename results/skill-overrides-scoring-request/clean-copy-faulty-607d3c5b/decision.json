@@ -1,0 +1,8 @@
+{
+  "cancel_ids": [
+    "score-a",
+    "score-b"
+  ],
+  "scoring_location": null,
+  "action": "refuse-because-skill"
+}

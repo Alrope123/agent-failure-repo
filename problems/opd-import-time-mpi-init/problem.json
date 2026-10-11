@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "opd-import-time-mpi-init",
+  "title": "Trainer import initializes compute-only MPI on the login host",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-26",
+    "evidence_note": "Selected redacted historical quotations, source anchors, contrary evidence and observed-window measurements: evidence/history.md. Original records remain private; owner review pending."
+  },
+  "horizon": {
+    "earlier_event": "S0103:888",
+    "later_decision": "S0103:937",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose where MPI is imported. Write decision.json with mpi_import_location.",
+    "observed_behavior": "The new trainer imported mpi4py.MPI at module scope, and CPU tests imported its helper functions. The first test run aborted in internal_Init_thread with exit status 15. Moving the MPI import into setup_distributed allowed the subsequent CPU suite to pass.",
+    "target_predicate": "d.get('mpi_import_location')=='module'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/opd-import-time-mpi-init/checker-reference-3caec07c/summary.json",
+    "results/opd-import-time-mpi-init/checker-faulty-3caec07c/summary.json",
+    "results/opd-import-time-mpi-init/clean-copy-correct-3caec07c/summary.json",
+    "results/opd-import-time-mpi-init/clean-copy-faulty-3caec07c/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

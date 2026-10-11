@@ -1,0 +1,11 @@
+{
+  "pbs_export": "-v",
+  "exported_variables": [
+    "EVAL_SUITE",
+    "RUN_ID",
+    "MODEL_ID",
+    "EVAL_VENV"
+  ],
+  "python_env": "next-env",
+  "inherited_module_table": false
+}

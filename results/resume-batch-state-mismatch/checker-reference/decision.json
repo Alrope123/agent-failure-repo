@@ -1,0 +1,8 @@
+{
+  "cli_batch": 1,
+  "accumulation": 16,
+  "derived_state_batch": 1,
+  "original_state_batch": 2,
+  "global_batch": 192,
+  "max_steps": 7314
+}

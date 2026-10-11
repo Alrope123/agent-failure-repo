@@ -1,0 +1,4 @@
+{
+  "backend_initialization": "module_scope",
+  "run_example": true
+}

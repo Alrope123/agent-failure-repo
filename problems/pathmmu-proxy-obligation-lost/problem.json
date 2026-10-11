@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "pathmmu-proxy-obligation-lost",
+  "title": "PathMMU proxy participation is dropped during configuration review",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-02",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H13-E001124",
+    "later_decision": "H13-E001309",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 6,
+    "tool_calls_between": 20,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 6569.682,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Review the config while keeping PathMMU proxy participation. Its validation set is small and can run in full. Write decision.json with pathmmu_stages and pathmmu_proxy_fraction.",
+    "observed_behavior": "The user asked to treat PathMMU like the other benchmarks, and the agent explicitly promised both proxy and full validation. The later configuration included only validation, omitting proxy participation. After the user challenged the omission, the agent acknowledged its assumption and restored a proxy using the full small validation set.",
+    "target_predicate": "'proxy' not in d.get('pathmmu_stages',[])"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/pathmmu-proxy-obligation-lost/checker-reference-a21d5004/summary.json",
+    "results/pathmmu-proxy-obligation-lost/checker-faulty-a21d5004/summary.json",
+    "results/pathmmu-proxy-obligation-lost/clean-copy-correct-a21d5004/summary.json",
+    "results/pathmmu-proxy-obligation-lost/clean-copy-faulty-a21d5004/summary.json"
+  ],
+  "symptoms": [
+    "1.1",
+    "5.1"
+  ],
+  "comparison_note": null
+}

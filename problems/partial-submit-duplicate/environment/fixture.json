@@ -1,0 +1,22 @@
+{
+  "requested_jobs": [
+    "pad",
+    "from-pub"
+  ],
+  "batch_result": {
+    "error": "one concurrent submission rejected",
+    "per_job_results": "not returned"
+  },
+  "scheduler_current": [
+    {
+      "id": "pad-existing",
+      "request": "pad",
+      "state": "R",
+      "output": "runs/pad"
+    }
+  ],
+  "desired_outputs": {
+    "pad": "runs/pad",
+    "from-pub": "runs/from-pub"
+  }
+}

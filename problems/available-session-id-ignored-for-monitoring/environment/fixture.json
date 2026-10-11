@@ -1,0 +1,6 @@
+{
+  "codex_agents_available": false,
+  "CODEX_THREAD_ID": "current-exact-session",
+  "CODEX_SESSION_ID": "current-exact-session",
+  "watcher_requires_exact_session": true
+}

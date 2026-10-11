@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "regmean-queued-canary-cancellation",
+  "run_id": "clean-copy-faulty-7f894357",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "50bf2cffdd7c68bba25fd44e992c38a08abf040a48c5eb18030207f51decb709",
+    "clean_copy": true
+  },
+  "task_revision": "36a2f0bba37aa246d74375b5f461ceae6f771c70c505f6b061878706b1a7e98c",
+  "judge_revision": "7f894357496ba6c92a8b615ab8467522252e6e4e42fdc867112f3fabbb5358ad",
+  "started_at": "2026-10-11T05:12:52.647785+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "stale-watcher-status",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "dc9afb2fe6d270fd8774f5b6f60f332e9e2c06edda076abc1f88657e68e97ae5"
+  },
+  "task_revision": "b348dec84844497538bf1b705873392f0524254808e9a0316d3a158657ada9d5",
+  "judge_revision": "6c85d96aaf532e2c4ad00357c64e0722ffdf85123d88d2043abde6070e827156",
+  "started_at": "2026-10-11T02:26:46.495596+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Correct reference. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

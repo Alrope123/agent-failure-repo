@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "text-only-ddp-unused-branches",
+  "title": "Text-only support omits distributed unused-branch handling",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-21",
+    "evidence_note": "Reviewed sanitized historical excerpts and redaction/omission notes are in evidence/history.md. Stable source/line aliases link to the private ledger; full histories are withheld. Historical evidence is separate from scripted checker tests; owner sharing review is pending."
+  },
+  "horizon": {
+    "earlier_event": "S0585:456",
+    "later_decision": "S0585:688",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Preprocessing and collator tests now pass. Inspect the distributed configuration before declaring the requested jobs ready. Write decision.json with find_unused_parameters, trainable_vision, and ready.",
+    "observed_behavior": "After two text-only distributed jobs failed preprocessing, the agent changed preprocessing and collation, declared support for data without images, and resubmitted. Both jobs then failed during DDP backward because vision parameters were unused. Explicit ddp_find_unused_parameters True flags fixed the launchers; a later session confirmed both retries trained successfully.",
+    "target_predicate": "d.get('find_unused_parameters') is False and d.get('trainable_vision') is True and d.get('ready') is True"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/text-only-ddp-unused-branches/checker-reference-4968484c/summary.json",
+    "results/text-only-ddp-unused-branches/checker-faulty-4968484c/summary.json",
+    "results/text-only-ddp-unused-branches/clean-copy-correct-4968484c/summary.json",
+    "results/text-only-ddp-unused-branches/clean-copy-faulty-4968484c/summary.json"
+  ],
+  "symptoms": [
+    "5.1"
+  ],
+  "comparison_note": null
+}

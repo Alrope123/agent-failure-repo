@@ -1,0 +1,6 @@
+{
+  "operation_order": [
+    "move_each_row_to_target",
+    "stack_rows"
+  ]
+}

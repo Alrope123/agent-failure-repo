@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "expandable-allocator-reintroduced",
+  "run_id": "clean-copy-correct-16bac7f9",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "b1c9e85b9052b6a2a5ba07e4b8d3b331e8a17ef493a70d09ad7b1bd458d8944d",
+    "clean_copy": true
+  },
+  "task_revision": "21bb339d79847281b2b89a94a5c6f25ebfb474ea4cd2f5c8ead1aea151f5d9d8",
+  "judge_revision": "16bac7f902bad8897b527f6b925518bdd0e0752c7bfbd2539fd62b73d5650886",
+  "started_at": "2026-10-11T05:12:41.916357+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

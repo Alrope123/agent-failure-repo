@@ -1,0 +1,4 @@
+{
+  "register_monitoring": false,
+  "session_source": "reject-after-codex-agents-fails"
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "models": [
+      "fisher"
+    ],
+    "total_jobs": 1,
+    "queue": "capacity"
+  },
+  "prior_composite_pattern": "sequential standard launchers in custom PBS wrapper"
+}

@@ -1,0 +1,16 @@
+{
+  "baseline_rows": [
+    "baseline-endo",
+    "baseline-rex",
+    "baseline-path"
+  ],
+  "previously_reported_models": [
+    "tuned",
+    "combined"
+  ],
+  "benchmarks": [
+    "endo",
+    "rex",
+    "path"
+  ]
+}

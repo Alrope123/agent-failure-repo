@@ -1,0 +1,10 @@
+{
+  "requested_jobs": [
+    "pad",
+    "from-pub"
+  ],
+  "desired_outputs": {
+    "pad": "runs/pad",
+    "from-pub": "runs/from-pub"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "capacity-switch-retains-next-eval-venv",
+  "run_id": "clean-copy-correct-e4804d48",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "cfc119235bf7b1dca5159c29da863666aae80ae9c4fe6f2661a3d64369add11d",
+    "clean_copy": true
+  },
+  "task_revision": "127a6e1b782ebca1dfb76ab25054f1f30b20c0ffc449be145f48404620ba5e07",
+  "judge_revision": "e4804d48f88c948817d57fdf8a19beaa98cff9c8cb71f218e3e0f0fbc004eb6d",
+  "started_at": "2026-10-11T05:12:38.778005+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "decision.json",
+    "check.json"
+  ],
+  "notes": "Actual clean proposed-file-copy setup/transition/judge verification. No model or agent run; deterministic correct/faulty controls only."
+}

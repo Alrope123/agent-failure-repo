@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "next-eval-interpreter-leaks-into-capacity",
+  "title": "Unconditional next-eval interpreter change breaks the shared capacity launcher",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-01",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H11-E000266",
+    "later_decision": "H11-E000495",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 9,
+    "tool_calls_between": 41,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 706.062,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "The next-eval-only Python path remains in the shared launcher when capacity invokes it.",
+    "observed_behavior": "To fix next-eval training, the agent unconditionally changed a shared launcher from the capacity interpreter to the next-eval interpreter. The next-eval probe passed. An earlier capacity job mock-job-a had worked, but a later capacity job mock-job-b failed after five seconds because the new interpreter was unavailable there. The agent acknowledged that hardcoding the shared launcher affected future capacity runs.",
+    "target_predicate": "d.get(\"python_selection\")==\"unconditional-next-train\""
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/next-eval-interpreter-leaks-into-capacity/checker-reference-ee189416/summary.json",
+    "results/next-eval-interpreter-leaks-into-capacity/checker-faulty-ee189416/summary.json",
+    "results/next-eval-interpreter-leaks-into-capacity/clean-copy-correct-ee189416/summary.json",
+    "results/next-eval-interpreter-leaks-into-capacity/clean-copy-faulty-ee189416/summary.json"
+  ],
+  "symptoms": [
+    "3.1"
+  ],
+  "comparison_note": null
+}

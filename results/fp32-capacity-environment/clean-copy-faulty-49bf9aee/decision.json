@@ -1,0 +1,19 @@
+{
+  "jobs": [
+    {
+      "id": "one",
+      "queue": "capacity",
+      "venv": "capacity-env"
+    },
+    {
+      "id": "fp32",
+      "queue": "capacity",
+      "venv": "next-train-env"
+    },
+    {
+      "id": "three",
+      "queue": "capacity",
+      "venv": "capacity-env"
+    }
+  ]
+}

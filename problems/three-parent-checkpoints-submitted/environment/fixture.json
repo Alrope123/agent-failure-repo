@@ -1,0 +1,10 @@
+{
+  "requested_path": "training",
+  "exists": [
+    "training",
+    "training/README.md",
+    "training/final/config.json",
+    "training/final/model.safetensors.index.json"
+  ],
+  "runtime_model_config_required": true
+}

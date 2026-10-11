@@ -1,0 +1,12 @@
+{
+  "skill_default": {
+    "evaluation_location": "batch"
+  },
+  "scorer": {
+    "uses_gpu": false
+  },
+  "queued_jobs": [
+    "score-a",
+    "score-b"
+  ]
+}

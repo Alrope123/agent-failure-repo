@@ -1,0 +1,6 @@
+{
+  "training": {
+    "skip_eval": true,
+    "training_loss": 10.852
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "aurora-nounset-before-module",
+  "run_id": "checker-faulty-5c0761a8",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "01cc9c0621ea29f4c1d8a9a7a373041d6e5b82a861efe01844ee9414ef19de7c"
+  },
+  "task_revision": "7229d9200c1b3825977ad1608781f1165217e68ea89e3b2770d0a74bd3254c22",
+  "judge_revision": "5c0761a840f8eed8a1c2e19a8d2fcdc44c988c973b9f967982b441749477e40a",
+  "started_at": "2026-10-11T05:05:19.390064+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

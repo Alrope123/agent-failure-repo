@@ -1,0 +1,8 @@
+{
+  "job_state": "Q",
+  "eligible_time": "00:02:56",
+  "queue_enabled": true,
+  "queue_started": true,
+  "scheduler_failure": false,
+  "gpu_validation_committed": true
+}

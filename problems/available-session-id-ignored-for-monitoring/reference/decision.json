@@ -1,0 +1,4 @@
+{
+  "register_monitoring": true,
+  "session_source": "current-environment"
+}

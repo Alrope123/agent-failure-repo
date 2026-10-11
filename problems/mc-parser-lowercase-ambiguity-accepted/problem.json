@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "mc-parser-lowercase-ambiguity-accepted",
+  "title": "An answer parser accepts a lowercase ambiguous choice as a valid MC answer",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-14",
+    "evidence_note": "See evidence/README.md for selected historical requirements, actions, observed outcomes, contrary evidence and redaction limits."
+  },
+  "horizon": {
+    "earlier_event": "N07:307",
+    "later_decision": "N07:327",
+    "intervening_work": "See private evidence record. Reduced task keeps inspection then decision, omitting unrelated work. Selected requirement-to-decision window has 3 visible user/assistant messages; this is not an assistant-turn count.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": null,
+    "tool_calls_between": null,
+    "sessions_spanned": 1,
+    "elapsed_seconds": null,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Choose a corrected implementation decision and write decision.json using the documented fields: ambiguous_response, predicted_option",
+    "observed_behavior": "Exact archived regexes reproduced locally accept \"a or b\" as A and reject \"A or B\". This contradicts the completed implementation claim that ambiguous outputs are invalid. The recorded Llama run had no ambiguous responses and scored 4/4 correctly.",
+    "target_predicate": "d.get('ambiguous_response') == 'a or b' and d.get('predicted_option') is not None"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/mc-parser-lowercase-ambiguity-accepted/checker-reference-296c2f60/summary.json",
+    "results/mc-parser-lowercase-ambiguity-accepted/checker-faulty-296c2f60/summary.json",
+    "results/mc-parser-lowercase-ambiguity-accepted/clean-copy-correct-296c2f60/summary.json",
+    "results/mc-parser-lowercase-ambiguity-accepted/clean-copy-faulty-296c2f60/summary.json"
+  ],
+  "symptoms": [
+    "5.1"
+  ],
+  "comparison_note": null
+}

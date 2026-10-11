@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "flat-mode-composite-wrapper",
+  "title": "FLAT benchmark retains COMPOSITE-only affinity wrapper",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-08-18",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H03-E000530",
+    "later_decision": "H03-E000626",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 5,
+    "tool_calls_between": 22,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 286.2,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "Prepare the FLAT benchmark launch with a supported affinity wrapper. Write decision.json with mode and wrapper.",
+    "observed_behavior": "The user requested a FLAT benchmark. The agent launched it with the inherited gpu_dev_compact wrapper, which rejected FLAT because it supports only COMPOSITE. The agent acknowledged that training had not started, selected gpu_tile_compact, and launched the corrected benchmark.",
+    "target_predicate": "d.get('mode')=='FLAT' and d.get('wrapper')=='gpu_dev_compact'"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/flat-mode-composite-wrapper/checker-reference-534edc28/summary.json",
+    "results/flat-mode-composite-wrapper/checker-faulty-534edc28/summary.json",
+    "results/flat-mode-composite-wrapper/clean-copy-correct-534edc28/summary.json",
+    "results/flat-mode-composite-wrapper/clean-copy-faulty-534edc28/summary.json"
+  ],
+  "symptoms": [
+    "1.2",
+    "other"
+  ],
+  "comparison_note": null
+}

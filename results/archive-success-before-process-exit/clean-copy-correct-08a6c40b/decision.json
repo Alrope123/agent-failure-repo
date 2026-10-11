@@ -1,0 +1,4 @@
+{
+  "action": "poll-extraction-until-exit",
+  "wait_for_exit": true
+}

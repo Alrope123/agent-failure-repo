@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "dense-decoder-group-mismatch",
+  "run_id": "checker-reference",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "582eb0a73d78337d75c2c0cdd8aa378c729863d331db77322e4a6dad2a87cc7b"
+  },
+  "task_revision": "1301881ffaf8fe8baabc2bb6f6be4e28314f50aad0a8b6eb7d59e64402c412b0",
+  "judge_revision": "8e675b544c32c27f5833da59f960589d3011893ce39462215e7adc7f20a6550d",
+  "started_at": "2026-10-11T02:51:32.320327+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": true,
+  "target_failure": false,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Checker reached its decision input with a valid mock fixture. Correct reference. No staged agent execution; horizon values describe zero model activity, not the historical incident. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

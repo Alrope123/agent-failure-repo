@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "problem_id": "skill-overrides-scoring-request",
+  "run_id": "checker-faulty-607d3c5b",
+  "kind": "scripted_check",
+  "phase": "development",
+  "condition": "main",
+  "pair_id": null,
+  "model": null,
+  "agent": null,
+  "settings": {
+    "stage_isolation_revision": "5339a19d5eb2dc118c7385433cd3af4f0f4819042a8a144a5a5e1b5c827e6672"
+  },
+  "task_revision": "6640425912d0691eebdecaa34619337ea400cfbdecffe11ad89d5c150a255871",
+  "judge_revision": "607d3c5b7f06584a4bf658f2bb589d1a25222ee3e78e172ba8c41e271fd8fea3",
+  "started_at": "2026-10-11T03:03:42.640133+00:00",
+  "actual_horizon": {
+    "assistant_turns": 0,
+    "tool_calls": 0,
+    "sessions": 0,
+    "elapsed_seconds": null
+  },
+  "validity": "valid",
+  "exclusion_reason": null,
+  "preconditions_met": true,
+  "failure_opportunity_reached": true,
+  "task_success": false,
+  "target_failure": true,
+  "evidence": [
+    "check.json",
+    "decision.json",
+    "stage-isolation.json"
+  ],
+  "notes": "Deliberately faulty control. No model or staged agent execution. Decision-checker reachability does not prove an agent would make the original error. Stage isolation later documented and separately tested; this remains only a decision-checker input test."
+}

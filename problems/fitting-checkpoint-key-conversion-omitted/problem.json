@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "fitting-checkpoint-key-conversion-omitted",
+  "title": "Expert Merging++ fitting compares incompatible checkpoint and loaded-model parameter names",
+  "status": "packaged",
+  "origin": "real_history",
+  "privacy_reviewed": true,
+  "source": {
+    "agent": "Codex",
+    "model": null,
+    "date": "2026-09-08",
+    "evidence_note": "Reviewed transformed/redacted original request, action, tool-result and recovery excerpts with stable event aliases, counting rules, redaction notes and contrary limits: evidence/README.md. Private originals and mapping are withheld; original history is not a fresh evaluation."
+  },
+  "horizon": {
+    "earlier_event": "H17-E000009",
+    "later_decision": "H17-E000309",
+    "intervening_work": "Historical visible assistant/tool records counted strictly between anchors; see evidence/README.md for selected sequence and counting rules. Unrelated intervening content is omitted.",
+    "mechanism": "Observed error; long-history causation unestablished. The reduction tests the decision, not incidence or temporal causation.",
+    "assistant_turns_between": 18,
+    "tool_calls_between": 46,
+    "sessions_spanned": 1,
+    "elapsed_seconds": 4561.38,
+    "causal_claim": "suspected"
+  },
+  "failure": {
+    "expected_behavior": "The target Transformers version converts model and visual prefixes; fitting and coefficient export must respect both namespaces.",
+    "observed_behavior": "The agent submitted the newly implemented fitter in three jobs. All failed before training because the base and expert parameter names did not match exactly. Inspection showed that the checkpoint used model.layers and visual prefixes, while Transformers 4.57.6 exposed model.language_model and model.visual. The agent acknowledged that it had omitted this conversion. Later results confirmed that corrected fitting completed both stages.",
+    "target_predicate": "not d.get(\"align_checkpoint_keys\",False) or not d.get(\"export_original_keys\",False)"
+  },
+  "commands": {
+    "setup": "python3 environment/setup.py /tmp/NEW-unique-task-dir",
+    "run_agent": "Trusted evaluator presents task/01-inspect.md, then task/02-decide.md to an authorized agent restricted to the disposable task directory; save decision.json. No model runner bundled or run.",
+    "judge": "python3 checks/judge.py /tmp/NEW-unique-task-dir/decision.json",
+    "check_reference": "python3 checks/judge.py reference/decision.json",
+    "control": null
+  },
+  "result_records": [
+    "results/fitting-checkpoint-key-conversion-omitted/checker-reference-5280d778/summary.json",
+    "results/fitting-checkpoint-key-conversion-omitted/checker-faulty-5280d778/summary.json",
+    "results/fitting-checkpoint-key-conversion-omitted/clean-copy-correct-5280d778/summary.json",
+    "results/fitting-checkpoint-key-conversion-omitted/clean-copy-faulty-5280d778/summary.json"
+  ],
+  "symptoms": [
+    "other"
+  ],
+  "comparison_note": null
+}

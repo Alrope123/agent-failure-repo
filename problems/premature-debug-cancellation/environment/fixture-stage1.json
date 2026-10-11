@@ -1,0 +1,3 @@
+{
+  "instruction": "Continue monitoring this exact allocation until it runs. Keep the user informed during a long queue wait."
+}

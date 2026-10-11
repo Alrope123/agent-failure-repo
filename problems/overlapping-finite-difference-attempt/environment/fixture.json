@@ -1,0 +1,20 @@
+{
+  "active_devices": [
+    3,
+    4,
+    5
+  ],
+  "proposed_devices": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "authorized_work": "Finish full JVP and report existing small-step checks",
+  "extra_full_sweep_authorized": false
+}

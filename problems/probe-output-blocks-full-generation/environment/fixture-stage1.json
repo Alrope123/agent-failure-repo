@@ -1,0 +1,9 @@
+{
+  "probe_output": {
+    "path": "outputs/rex.jsonl",
+    "rows": 86
+  },
+  "generator_contract": {
+    "existing_output_without_overwrite": "exit1"
+  }
+}
