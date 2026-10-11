@@ -18,6 +18,7 @@ The contributor should review the complete collection and sanitized packages bef
 
 ## Owner review
 
+- **Submission files:** follow [what to push](SUBMITTING.md). Review the sanitized collection summary, index, and coverage as well as every problem, evidence file, and actual run record. A problem's review flag does not approve those other files automatically.
 - **Scope:** the agent inspected only the histories and project copies you authorized. It states which sources were unavailable.
 - **Permission:** you are entitled to share the included code, messages, and other material. Other people's private messages are omitted unless you have permission to include them.
 - **Privacy:** inspect all proposed files, including logs, patches, screenshots, filenames, metadata, and test fixtures. Remove credentials, personal details, private repository addresses, customer data, and private home paths. Use stable fake names where relationships matter.

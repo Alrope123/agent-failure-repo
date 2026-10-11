@@ -49,6 +49,18 @@ collection intact and start a separate workspace.
 
 ## Finish with a useful report
 
+Prepare the shareable files defined in [what to push](docs/SUBMITTING.md):
+sanitized collection summary, index, and coverage; each credible problem and
+its reviewed historical evidence; runnable task files where feasible; and every
+actual evaluation record. Keep original histories and private working reports
+local. State missing reproduction or evaluation work without fabricating runs.
+
 Write `REPORT.md` at the collection root as the user's entrypoint. Include a short summary and a complete candidate table with symptom, observed horizon, consequence, evidence, reproduction status, and next action. Link the private coverage report, complete incident index, detailed records, and all completed problem packages. Report the inspected scope and gaps; counts of distinct candidates, duplicates, rejected cases, packaged tasks, and deferred work; and the actual outcomes of every reproduction attempt. Keep counts consistent with the index. For each deferred or unreproduced incident, give the reason, evidence level, and next action. State the main limitation instead of claiming an exhaustive search or causal explanation the evidence cannot support. Give the user the absolute report path; setup alone is not a completed collection.
+
+In the console, explain the findings, exact proposed or pushed files, checks,
+missing results, and next steps. Give the local report path and, only after a
+successful authorized upload, the branch, commit, and pull-request link. Do
+not finish with just a file link. Reuse existing approval of these exact files;
+otherwise prepare the complete submission before asking for owner review.
 
 Source: [Contribution process](CONTRIBUTING.md), [finding failures](docs/FINDING_FAILURES.md), and [reproducing failures](docs/REPRODUCING.md).

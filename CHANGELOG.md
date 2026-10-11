@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-10 — Explicit submission contents and console delivery
+
+- Defined which collection summaries, incident evidence, task files, and actual evaluation records contributors should push.
+- Distinguished incident-only submissions from runnable packages and fresh evaluations.
+- Required an exact proposed/pushed file list and findings in the final console response.
+- Added the submission guide to the standalone skill; private histories remain local.
+
 ## 2026-10-10 — Historical Claude Code and Codex runs
 
 - Made historical runs from both tools the primary collection sources.

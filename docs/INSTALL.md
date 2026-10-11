@@ -96,7 +96,11 @@ selected exports or an authorized path; installation cannot unlock chat history.
 - A detailed evidence record for each candidate, with missing fields explained.
 - Runnable task packages where feasible, plus concrete deferral reasons.
 - Every reproduction attempt and comparison, with claims matched to evidence.
-- A short readable summary pointing to the complete local material.
+- A console explanation of findings, proposed submission files, checks, and gaps,
+  with links to the complete local material.
+
+The [submission guide](SUBMITTING.md) defines the reviewed collection reports,
+problem packages, and actual run records to push after owner approval.
 
 ## Update or remove
 

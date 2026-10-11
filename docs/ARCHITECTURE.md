@@ -27,10 +27,13 @@ conversation and writes `REPORT.md` as the final entrypoint.
 
 ## Package boundaries
 
-`docs/` explains the method. `problems/<id>/` contains the task, environment,
+`docs/` explains the method; `docs/collections/<collection-id>/` holds reviewed
+collection summaries, indexes, and coverage reports. `problems/<id>/` contains the task, environment,
 checks, and reference solution. `results/<id>/<run-id>/` contains one attempt's
 record and reviewed evidence. `commands/` contains collection tools; each task
 documents its own setup and evaluation commands in its manifest.
+The [submission guide](SUBMITTING.md) defines the exact shareable file set and
+the console report; private ledgers and original transcripts remain local.
 
 Inside a problem, `task/` stores ordered prompts and `environment/` stores
 initial files. Present only the current stage's permitted prompt and files;

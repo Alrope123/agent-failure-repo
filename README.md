@@ -270,10 +270,44 @@ what was found, built, checked, and left unresolved. No matches is a valid
 result after a real search. Never claim exhaustive review of inaccessible
 history or claim evaluations that were not run.
 
+Also explain the proposed submission in the console: list the exact files,
+their purpose, evaluation status, and outstanding work. Follow the file contract
+below and [the submission guide](docs/SUBMITTING.md). A report link alone is
+insufficient. If an authorized push occurs, report the actual branch, commit,
+and pull-request link; otherwise state that the files remain local.
+
 Keep raw histories and unreviewed extracts private. Prepare sanitized sharing
 files and show exactly what they contain. Uploads and pull requests require
 the owner's review of those files and authorization to share. This collection
 workflow ends with a local, reviewable result.
+
+## What we want contributors to push
+
+Submit every shareable credible failure, with reviewed evidence and the
+reproduction and evaluation work actually completed.
+
+| Push these files | Include |
+| --- | --- |
+| `docs/collections/<collection-id>/README.md`, `incidents.csv`, `coverage.md` | Findings, a sanitized candidate index, and separate Claude Code/Codex coverage and gaps. |
+| `problems/<id>/README.md` and `problem.json` | What failed, observed horizon, why it matters, intended error, evidence level, and commands. |
+| `problems/<id>/evidence/` when shareable | Relevant historical messages, tool calls/results, diffs, tests, and redaction notes. |
+| `problems/<id>/task/`, `environment/`, `checks/`, `reference/` | Minimal staged task, starting files, independent checks, and a correct solution. |
+| `results/<id>/<run-id>/summary.json` and evidence | Every actual attempt, including misses, invalid attempts, scripted checks, and controls. |
+
+Source: [complete submission requirements](docs/SUBMITTING.md).
+
+**Incident-only reports are welcome.** Keep the scaffold's explanatory files,
+mark reproduction or evaluation **not run**, explain what is missing, and do
+not create imaginary run records. For each incident, explicitly answer:
+**Was the horizon long? Why is the error meaningful? What behavior should the
+task trigger and the evaluator detect?**
+
+Keep `.local/`, raw transcripts, history indexes, private `REPORT.md`, secrets,
+and unreviewed material local. Create reviewed collection summaries at the
+paths above. After the owner approves the exact files and sharing destination,
+push a contribution branch and open a pull request against this repository's
+`main`. Use a fork if needed. The agent should prepare and check the complete
+submission before requesting that final review.
 
 ## Optional: install the reusable skill
 

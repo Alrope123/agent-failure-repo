@@ -10,6 +10,7 @@ Each package contains:
 your-short-name/
   README.md        # incident, meaning, horizon, reduction, limits
   problem.json     # small machine-readable record and commands
+  evidence/        # optional reviewed historical excerpts and artifacts
   task/            # ordered messages and handoff instructions for the agent
   environment/     # initial files and local fixtures
   checks/          # reviewer-owned checks and outcome definitions
@@ -21,3 +22,6 @@ which files and messages it receives at each stage, what persists, and how
 sessions or compaction are handled. Follow [the reproduction guide](../docs/REPRODUCING.md).
 
 No real incidents have been added to this starter.
+
+See [what to push](../docs/SUBMITTING.md) for incident-only requirements,
+collection summaries, evaluation records, and private files to exclude.

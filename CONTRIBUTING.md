@@ -38,13 +38,13 @@ If the agent cannot access your old conversations, give it a selected export or 
 4. Build a task for every feasible incident using [the reproduction guide](docs/REPRODUCING.md). If a reproduction or model evaluation is not feasible, keep the incident report and state what is missing and the next action.
 5. Put sanitized run summaries and evidence under `results/<slug>/<run-id>/`. Include every attempted run and its condition, even when the model avoids the failure or the setup breaks.
 6. Reconcile the index, all symptom searches, completed packages, and deferred work. Run `python3 commands/validate.py` and perform the [owner review](docs/REVIEW.md). Validation checks structure; reviewers still need to inspect scope coverage, tasks, and evidence.
-7. Hand the reviewed collection report, index, and packages to the contributor locally. If a shared remote is later available and submission is authorized, use a pull request. State the main limitation and the help needed for each unfinished incident. Do not present a shortlist as the complete collection.
+7. Prepare the exact shareable file set in [what to push](docs/SUBMITTING.md). Explain it in the console along with findings, checks, and gaps. Once the owner has reviewed and authorized those files, push a contribution branch (in a fork if needed) and open a pull request against this repository's `main`. Otherwise deliver the complete local submission for review. Do not present a shortlist as the complete collection.
 
 ## Keep the parts separate
 
 | Location | What belongs there |
 |---|---|
-| `docs/` | Shared contributor instructions and methodology |
+| `docs/` | Shared instructions and methodology; reviewed collection summaries in `docs/collections/<collection-id>/` |
 | `problems/<slug>/` | One incident and its reproducible task package |
 | `results/<slug>/<run-id>/` | Sanitized evidence from one attempt |
 | `commands/` | Shared repository tools |

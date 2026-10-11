@@ -36,6 +36,10 @@ new assessment and preserve the old one.
 
 No model evaluation records are included in this starter.
 
+Create records only for actual attempts. If evaluation was not run, state
+that and the reason in the problem and collection summaries; do not commit
+the untouched result template. See [what to push](../docs/SUBMITTING.md).
+
 A valid scored attempt requires both `preconditions_met` and
 `failure_opportunity_reached` to be true. Invalid or unjudgeable attempts have
 a null `target_failure`; independently known task correctness can still be
