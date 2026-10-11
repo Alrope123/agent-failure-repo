@@ -2,7 +2,7 @@
   "format_version": 1,
   "files": {
     ".gitignore": "17ada4adf1964fafdbd851df55fdfd5689c46a9efe4f51754044a72ae2987898",
-    "AGENTS.md": "fbd498eb3daa407e10a4cf5818ef15db6810c18f9a198ade7106ac849675a0cd",
+    "AGENTS.md": "a5cb0e399d273b17cac0b5d8fb2ebfbf986831ec123a3f301810a4ce52b17036",
     "CONTRIBUTING.md": "5817bdad81adc50ab3469b8acf2439db218750691ba90c656ef3215e19e5dcc0",
     "commands/new_problem.py": "b74b31891bad16e9a7ddd47c00bd9ea934a94213d0227fb02c8f6b961a55e242",
     "commands/validate.py": "5883b11f887d37232218a1f1ca79b5973b2ba0f017092ef6479d30497d7ff8e3",

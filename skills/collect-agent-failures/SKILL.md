@@ -12,6 +12,11 @@ and handoffs. A long session is an observation, not by itself a causal finding.
 
 ## Start with scope and a private workspace
 
+If the README workflow already created a collection, continue there in this
+conversation. Preserve the target project recorded before setup and read the
+saved index and coverage. Do not require installation, another invocation, or
+a fresh session before doing the collection work.
+
 Use the histories, projects, date ranges, and exports the user authorizes. If
 scope is already clear, proceed; do not repeatedly ask permission to read it.
 If history access or scope is missing, ask for the specific sources or selected
@@ -125,8 +130,10 @@ execute task commands, verify the history, or certify causation or privacy.
 
 Deliver the complete index and coverage report, detailed per-incident evidence,
 all completed packages, every run record, and a concrete reason and next action
-for every deferred candidate. Include a short summary that points to the full
-material. Do not let a summary replace the evidence or an unread queue disappear.
+for every deferred candidate. Write `REPORT.md` at the collection root with a
+short summary, complete candidate table, and links to the full material. Give
+the user its absolute path. Do not let a summary replace the evidence or an
+unread queue disappear.
 If access, cost, time, or context limits stop work, save exact continuation
 points instead of claiming exhaustive coverage.
 

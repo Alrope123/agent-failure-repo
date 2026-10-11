@@ -4,6 +4,13 @@ Updated 2026-10-10.
 
 ## Summary
 
+To start immediately, give your agent the ready-to-use message in the
+repository readme. It handles setup and collection in the same
+conversation; installation and restarting the agent are unnecessary for that
+path. This page covers optional installation for reuse in later sessions.
+
+Source: [Repository entrypoint](../README.md).
+
 Install `collect-agent-failures` once, then invoke it in an agent that can read
 the past sessions you select. It searches all 20 symptom categories and new
 modes, captures detailed evidence, and builds small reproduction tasks. The

@@ -11,6 +11,13 @@ collector and no automatic model service.
 
 ## Flow
 
+The repository's `README.md` is the complete agent entrypoint. A user can paste its launch
+message into an existing project conversation. The agent records that project
+and scope before setting up the separate collection kit. `commands/start.py`
+creates a private workspace or resumes one it previously created; it does not
+inspect histories. The agent then continues the following work in the same
+conversation and writes `REPORT.md` as the final entrypoint.
+
 1. Read the owner's selected history into private working notes.
 2. Record the earlier requirement, later error, consequence, and uncertainty.
 3. Reduce the incident into a task under `problems/`.

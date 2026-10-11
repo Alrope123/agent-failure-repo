@@ -57,3 +57,12 @@ templates, and local tools. Source files remain in the repository's normal
 locations; the bundle builder checks that packaged copies match them. This
 keeps installation usable without the original checkout while avoiding manual
 edits to two versions of the same guide.
+
+## Make the README directly executable by the agent
+
+The primary entrypoint is a message asking an existing agent to follow the
+README. Skill installation remains optional. The README states the full
+workflow and its completion condition so setup does not become the delivery.
+A local start command creates or resumes a private workspace; it does not
+pretend to read history or invoke a model. Agents preserve the original target
+project when moving into the collection workspace.

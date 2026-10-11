@@ -6,6 +6,14 @@ Updated 2026-10-10.
 
 Collect as many distinct, credible failures as the contributor's authorized history supports. Search the full agreed scope against [all 20 symptoms](docs/SYMPTOMS.md), and retain failures that do not fit them. Do not stop after one example, a few interesting examples, or one hit per symptom. Build minimal reproductions for every feasible credible incident and report evidence separately from inferred causes.
 
+When launched through the repository README, continue the collection in the
+same conversation after setup. The target project is the user's project from
+before setup, not the collection kit. Use the printed collection workspace;
+do not require another skill invocation or repeat permission already granted
+for the stated history. On resume, read the saved index and coverage first.
+If their project or scope differs from the current request, keep the old
+collection intact and start a separate workspace.
+
 ## Follow this sequence
 
 1. **Establish the history you may inspect.** Use only the conversations, exports, projects, or dates the contributor explicitly authorizes. Permission to contribute here does not grant permission to search every chat, account, or file on their machine. If no history is available, ask for a chosen export or a description; say which evidence you lack. Do not claim access to conversations your tools cannot read.
@@ -33,6 +41,6 @@ Collect as many distinct, credible failures as the contributor's authorized hist
 
 ## Finish with a useful report
 
-Deliver the collection report, complete incident index, symptom coverage, and all completed problem packages. Report the inspected scope and gaps; counts of distinct candidates, duplicates, rejected cases, packaged tasks, and deferred work; and the actual outcomes of every reproduction attempt. Keep counts consistent with the index. For each deferred or unreproduced incident, give the reason, evidence level, and next action. State the main limitation instead of claiming an exhaustive search or causal explanation the evidence cannot support.
+Write `REPORT.md` at the collection root as the user's entrypoint. Include a short summary and a complete candidate table with symptom, observed horizon, consequence, evidence, reproduction status, and next action. Link the private coverage report, complete incident index, detailed records, and all completed problem packages. Report the inspected scope and gaps; counts of distinct candidates, duplicates, rejected cases, packaged tasks, and deferred work; and the actual outcomes of every reproduction attempt. Keep counts consistent with the index. For each deferred or unreproduced incident, give the reason, evidence level, and next action. State the main limitation instead of claiming an exhaustive search or causal explanation the evidence cannot support. Give the user the absolute report path; setup alone is not a completed collection.
 
 Source: [Contribution process](CONTRIBUTING.md), [finding failures](docs/FINDING_FAILURES.md), and [reproducing failures](docs/REPRODUCING.md).

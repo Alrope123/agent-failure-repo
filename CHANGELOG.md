@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-10 — Start the full collection from one message
+
+- Made the README a complete agent workflow with a ready-to-paste launch message.
+- Added one-command private setup and safe resume without overwriting evidence.
+- Made skill installation optional and required collection to continue after setup.
+- Standardized `REPORT.md` as the readable entrypoint to every candidate and result.
+
 ## 2026-10-10 — Installable skill and detailed evidence collection
 
 - Added a standalone collection skill with Codex and Claude Code installation.
