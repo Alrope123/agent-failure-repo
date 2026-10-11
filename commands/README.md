@@ -38,6 +38,21 @@ original target project when changing directories.
 
 ## Work inside the collection
 
+First inventory historical Claude Code and Codex runs for the target project,
+then read each eligible source in successive pages:
+
+```bash
+python3 commands/history.py inventory --project /path/to/target-project --output .local/history-index.json
+python3 commands/history.py read --index .local/history-index.json --source SOURCE_ID --start-line 1 --max-lines 200
+```
+
+Replace `SOURCE_ID` with the source's `id` from the index. `next_start_line`
+is the starting line for the next page; `eof` means the end of the file.
+Read through that end, recording reviewed ranges. Both tools are
+checked by default, including Codex archived sessions. The helper never modifies
+transcripts; its output is private and unredacted. Read [the history guide](../docs/HISTORY.md)
+for custom roots, aliases, subagents, duplicate events, and unsupported records.
+
 Change to the printed workspace before creating or checking submissions.
 For the default workspace, from the kit root:
 
@@ -96,5 +111,5 @@ collection workspace. It does not run contributed tasks or model calls.
 ## Sources
 
 Implementations: [start.py](start.py), [new_problem.py](new_problem.py),
-[validate.py](validate.py), [install_skill.py](install_skill.py), and
+[history.py](history.py), [validate.py](validate.py), [install_skill.py](install_skill.py), and
 [build_skill.py](build_skill.py).

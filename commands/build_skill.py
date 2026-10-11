@@ -10,10 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = Path("skills/collect-agent-failures")
 FILES = (
     ".gitignore", "AGENTS.md", "CONTRIBUTING.md",
-    "commands/new_problem.py", "commands/validate.py",
+    "commands/new_problem.py", "commands/validate.py", "commands/history.py",
     "problems/README.md", "results/README.md",
     *(f"docs/{name}.md" for name in (
-        "FINDING_FAILURES", "REPRODUCING", "REVIEW", "SYMPTOMS", "EVIDENCE")),
+        "FINDING_FAILURES", "HISTORY", "REPRODUCING", "REVIEW", "SYMPTOMS", "EVIDENCE")),
 )
 CACHE_NAMES = {"__pycache__", ".pytest_cache", ".DS_Store"}
 

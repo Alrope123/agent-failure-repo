@@ -18,7 +18,7 @@ creates a private workspace or resumes one it previously created; it does not
 inspect histories. The agent then continues the following work in the same
 conversation and writes `REPORT.md` as the final entrypoint.
 
-1. Read the owner's selected history into private working notes.
+1. Inventory and read the owner's historical Claude Code and Codex runs into private working notes, with separate coverage for each tool.
 2. Record the earlier requirement, later error, consequence, and uncertainty.
 3. Reduce the incident into a task under `problems/`.
 4. Check the setup, a correct solution, and an intentionally faulty solution.
@@ -57,6 +57,12 @@ the package tools. Neither script reads history or contacts a service. Detailed
 incident evidence stays separate from the smaller runnable reproduction.
 
 ## Tool behavior and limitations
+
+`commands/history.py` inventories known local transcript stores by authorized
+project and reads selected sources in pages with original line anchors. It
+includes Codex archives and relevant Claude subagents, preserves duplicate
+representations for review, and reports parsing gaps. It does not execute
+historical commands or certify that a failure occurred. See [historical runs](HISTORY.md).
 
 The scaffolder copies a template into a new problem directory and refuses to
 overwrite an existing one. The validator reads metadata and evidence paths.

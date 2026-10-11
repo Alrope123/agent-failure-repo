@@ -62,7 +62,9 @@ class SkillDistributionTests(unittest.TestCase):
         actual = self.builder.tree_files(self.kit)
         self.assertEqual(actual, self.builder.expected_files(self.root))
         self.assertNotIn("README.md", actual)
-        self.assertFalse(any("secret" in p or "history" in p or "cached" in p for p in actual))
+        self.assertFalse(any("secret" in p or "cached" in p or p.startswith(".local/")
+                             or p == "results/private/transcript.txt" for p in actual))
+        self.assertIn("commands/history.py", actual)
 
     def test_manifest_matches_every_bundled_file(self):
         manifest = json.loads((self.skill / "assets/kit-manifest.json").read_text())

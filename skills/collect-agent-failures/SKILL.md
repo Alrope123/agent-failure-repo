@@ -1,6 +1,6 @@
 ---
 name: collect-agent-failures
-description: Investigate user-authorized past agent interactions, collect as many distinct failures as the evidence supports across 20 symptom classes and new modes, and build minimal reproducible tasks. Use for retrospective failure collection, not general debugging or permission to search unrelated history.
+description: Investigate user-authorized historical Claude Code and Codex runs, collect failures across 20 symptom classes and new modes, and build minimal reproducible tasks. Use for retrospective failure collection, not general debugging or permission to search unrelated history.
 ---
 
 # Collect agent failures comprehensively
@@ -40,6 +40,29 @@ Read the collection's `AGENTS.md`. Bundled resources also work before setup:
 [collection workflow](assets/kit/AGENTS.md),
 [history search](assets/kit/docs/FINDING_FAILURES.md), and
 [all 20 symptoms](assets/kit/docs/SYMPTOMS.md).
+
+## Read historical Claude Code and Codex runs
+
+Check **both** tools' past runs regardless of the tool hosting you. The current
+chat supplements historical transcripts; it does not replace them. Follow
+[historical-run discovery and reading](assets/kit/docs/HISTORY.md). From the
+collection workspace, substitute the authorized target project's absolute path:
+
+```bash
+python3 commands/history.py inventory --project /path/to/target-project --output .local/history-index.json
+python3 commands/history.py read --index .local/history-index.json --source SOURCE_ID --start-line 1 --max-lines 200
+```
+
+Replace `SOURCE_ID` with each eligible source's `id`. Continue every source
+using `next_start_line` until `eof`; save reviewed ranges and unresolved gaps.
+Include archived Codex runs and related subagents. Record separate Claude Code
+and Codex coverage, including unavailable or unsupported sources. Handle custom
+roots, moved projects, replayed records, and malformed entries as the guide
+describes. Do not count inventorying as review, infer zero failures from absent
+logs, or stop after reading only the newest sessions or the ends of a transcript.
+For an older collection without the reader, use this skill's
+`assets/kit/commands/history.py` by absolute path and save its index in the
+existing collection's `.local/` directory. Preserve prior evidence and ledgers.
 
 ## Search broadly, retain detail, and account for every candidate
 

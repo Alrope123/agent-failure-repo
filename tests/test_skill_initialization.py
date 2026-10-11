@@ -89,6 +89,49 @@ class SkillInitializationTests(unittest.TestCase):
         self.assertEqual(owner_file.read_text(), "Preserve existing notes.\n")
         self.assertEqual(list(self.output.iterdir()), [owner_file])
 
+    def test_standalone_history_reader_finds_both_tools_and_archives(self):
+        self.assertEqual(self.initialize().returncode, 0)
+        project = self.base / "target-project"
+        project.mkdir()
+        claude = self.base / "synthetic-claude"
+        codex = self.base / "synthetic-codex"
+        fixtures = {
+            claude / "projects/project/session.jsonl": [
+                {"type": "user", "sessionId": "claude-old", "cwd": str(project),
+                 "message": {"role": "user", "content": "Earlier standing rule."}},
+                {"type": "assistant", "sessionId": "claude-old", "cwd": str(project),
+                 "message": {"role": "assistant", "content": [
+                     {"type": "text", "text": "Later claimed completion."}]}},
+            ],
+            codex / "archived_sessions/rollout-old.jsonl": [
+                {"type": "session_meta", "payload": {"id": "codex-old", "cwd": str(project)}},
+                {"type": "response_item", "payload": {"type": "message", "role": "user",
+                    "content": [{"type": "input_text", "text": "Archived request evidence."}]}},
+            ],
+        }
+        for path, records in fixtures.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("".join(json.dumps(record) + "\n" for record in records))
+        before = {path: path.read_bytes() for path in fixtures}
+        inventory = self.command("history.py", "inventory", "--project", str(project),
+                                 "--claude-home", str(claude), "--codex-home", str(codex),
+                                 "--output", ".local/history-index.json")
+        self.assertEqual(inventory.returncode, 0, inventory.stdout + inventory.stderr)
+        index = json.loads((self.output / ".local/history-index.json").read_text())
+        selected = [source for source in index["sources"] if source["eligible"]]
+        self.assertEqual({source["provider"] for source in selected}, {"claude", "codex"})
+        pages = []
+        for source in selected:
+            result = self.command("history.py", "read", "--index", ".local/history-index.json",
+                                  "--source", source["id"], "--start-line", "1", "--max-lines", "200")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertTrue(json.loads(result.stdout)["eof"])
+            pages.append(result.stdout)
+        self.assertIn("Earlier standing rule.", "".join(pages))
+        self.assertIn("Later claimed completion.", "".join(pages))
+        self.assertIn("Archived request evidence.", "".join(pages))
+        self.assertEqual(before, {path: path.read_bytes() for path in fixtures})
+
     def test_refuses_existing_and_dangling_output_symlinks(self):
         owner = self.base / "owner-directory"
         owner.mkdir()

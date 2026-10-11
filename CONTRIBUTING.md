@@ -6,6 +6,11 @@ Updated 2026-10-10.
 
 Ask your agent to search the full history you authorize and collect every distinct credible failure it can find. Use [all 20 symptoms](docs/SYMPTOMS.md) as a search checklist, while retaining other modes too. There is no quota or limit, and finding one example does not finish the search. Incident reports are welcome when a runnable reproduction is not yet feasible.
 
+Start with **historical Claude Code and Codex runs** for your selected project.
+The collecting agent checks both tools' transcript stores and reports coverage
+separately. The current conversation adds context. See [how histories are found
+and read](docs/HISTORY.md).
+
 ## Choose how far to take your contribution
 
 | Contribution | What it contains | What it supports |

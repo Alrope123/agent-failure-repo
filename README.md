@@ -5,7 +5,8 @@ Updated 2026-10-10.
 ## Summary
 
 Give the message below to the coding agent you already use on a project. It
-reads this guide, prepares a private workspace, reviews available history,
+reads this guide, prepares a private workspace, reviews historical runs from
+**both Claude Code and Codex** for your project,
 collects detailed evidence, and builds small reproductions. You do not need to
 install a skill, choose a template, or run the commands yourself. The agent
 continues in the same conversation and produces a report for you to review.
@@ -16,8 +17,10 @@ continues in the same conversation and produces a report for you to review.
 Read https://raw.githubusercontent.com/DylanZSZ/agent-failure-repo/main/README.md
 and follow its instructions for the collecting agent. Start now and carry out
 all feasible steps; do not stop at a plan or installation. I authorize reviewing
-this conversation, the available past agent sessions for my current project,
-and history exports I supply. Collect as many supported failures as possible,
+historical Claude Code and Codex runs for my current project, including their
+available local transcripts and history exports I supply. Check both tools,
+regardless of which agent you are. Use this conversation as supplementary
+evidence. Collect as many supported failures as possible,
 with detailed evidence and minimal reproductions. Keep everything local and
 show me the report and proposed sharing files before uploading anything.
 ```
@@ -40,8 +43,8 @@ unrelated repository edit is not a request to inspect history.
 Before changing directories, record which project the user is working on.
 The collection kit is a separate tool; do not mistake its own Git history for
 the user's project history. Use the scope the user has already authorized. The
-message above covers the current conversation, available past sessions for
-that project, and supplied exports. Additional projects need their own scope.
+message above covers historical Claude Code and Codex sessions for that project,
+supplied exports, and this conversation. Additional projects need their own scope.
 
 Begin with material already visible or available through authorized tools.
 Use session metadata to select the target project's histories before reading
@@ -65,7 +68,7 @@ git clone https://github.com/DylanZSZ/agent-failure-repo.git
 
 Choose the clone's parent directory first. If that destination already exists,
 verify it is this kit and reuse it; choose a new directory if it is unrelated.
-If an older checkout lacks the setup command below, clone a current copy into
+If an older checkout lacks `commands/start.py` or `commands/history.py`, clone a current copy into
 a new directory. Preserve existing files and changes. Read the local setup
 command before running it. From the kit root, run:
 
@@ -90,9 +93,14 @@ It refuses other existing directories without changing them.
 an agent. After it succeeds, change your working directory to the printed
 collection workspace, read its `AGENTS.md`, and continue the steps below in
 this turn. Do not tell the user to invoke another skill or start a new session.
+
 When resuming, read the saved index and coverage report before continuing.
 Compare their project and scope with the current request. If they differ,
 keep the old collection intact and create a new named workspace with `--output`.
+
+If an older collection lacks the history reader or guide, use those files
+from the current kit by absolute path, writing the index into the collection's
+existing `.local/` directory. Preserve its evidence; do not initialize over it.
 
 If shell or file access is unavailable, review authorized visible history and
 produce the incident records in your reply. State that runnable packages could
@@ -100,8 +108,41 @@ not be created. Do not claim the local setup ran.
 
 ### 3. Search the full available scope
 
+**Start with historical runs from both tools.** A Claude agent must check Codex
+history too; a Codex agent must check Claude Code history too. Reviewing only
+the current chat, recent sessions, or a prompt-history index is insufficient.
+From the collection workspace, substitute the absolute target project path
+recorded in step 1:
+
+```bash
+python3 commands/history.py inventory --project /path/to/target-project --output .local/history-index.json
+```
+
+This inventories local Claude Code transcripts and Codex active and archived
+transcripts, selecting by project metadata. It reads sources without changing
+them. The index contains private paths and metadata; keep it local. Existing
+output files are refused, so use a new index filename when refreshing.
+
+For **every eligible source** in the index, use its `id` to read successive
+pages, starting at line 1:
+
+```bash
+python3 commands/history.py read --index .local/history-index.json --source SOURCE_ID --start-line 1 --max-lines 200
+```
+
+`next_start_line` is the starting line for the next page; `eof` means the end
+of the file. Continue until `eof` is true, recording reviewed ranges as you
+go. Reduce the page size if your tool truncates output; a truncated page has not
+been fully reviewed. The reader preserves source line anchors and reports
+omitted or unsupported records. Read [the historical-run guide](docs/HISTORY.md)
+for custom storage roots, project aliases, subagents, resumed sessions,
+duplicate events, and missing sources. Ask for a selected export only when
+local access is insufficient; continue with the histories that are available.
+
 Fill `.local/collection-report.md` with the source inventory, available event
-ranges, inspected portions, and gaps. Review each source chronologically,
+ranges, inspected portions, and gaps, with a separate row for each tool.
+Inventorying a file does not mean its contents have been reviewed.
+Review each source chronologically,
 then check every symptom below, then compare edits, tests, corrections,
 retries, context changes, and handoffs that keyword searches may miss.
 
@@ -255,7 +296,7 @@ updates. Installation is unnecessary for the workflow above.
 | [docs/](docs/ARCHITECTURE.md) | Search, evidence, reproduction, and review guides |
 | [problems/](problems/) | One task package per real incident |
 | [results/](results/) | Reviewed attempt records and evidence |
-| [commands/](commands/) | Start, scaffold, validate, and install tools |
+| [commands/](commands/) | Start, read historical runs, scaffold, validate, and install |
 | [templates/](templates/) | Coverage, incident, problem, and result forms |
 | [skills/](skills/collect-agent-failures/SKILL.md) | Standalone installable skill |
 | [examples/](examples/stale-handoff/) | Synthetic teaching example |

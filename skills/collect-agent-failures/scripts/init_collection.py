@@ -51,6 +51,10 @@ def initialize(output, skill=SKILL):
         'reviewed run records in `results/`. The initializer does not create a\n'
         'Git repository or upload anything. If this directory is inside an existing\n'
         'repository, check its tracking state before adding private material.\n\n'
+        'Review historical runs from both Claude Code and Codex using\n'
+        '[the historical-run guide](docs/HISTORY.md) and `commands/history.py`.\n'
+        'Use the authorized target project from before setup, not this kit.\n'
+        'Record each tool\'s coverage and gaps separately.\n\n'
         'From this directory, run `python3 commands/new_problem.py short-name`\n'
         'to start a package and `python3 commands/validate.py` to check metadata.\n',
         encoding='utf-8',

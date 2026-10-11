@@ -6,6 +6,14 @@ Updated 2026-10-10.
 
 Collect as many distinct, credible failures as the contributor's authorized history supports. Search the full agreed scope against [all 20 symptoms](docs/SYMPTOMS.md), and retain failures that do not fit them. Do not stop after one example, a few interesting examples, or one hit per symptom. Build minimal reproductions for every feasible credible incident and report evidence separately from inferred causes.
 
+The primary sources are **historical Claude Code and Codex runs**. Check both
+tools regardless of which one is running this collection. Use the current
+conversation as supplementary evidence. Follow [the historical-run guide](docs/HISTORY.md)
+to inventory local transcripts by authorized project and read every selected
+source through its end. Include relevant subagents and Codex archived sessions.
+Record a separate access and coverage status for each tool. A prompt index,
+recent-session list, or current-chat review cannot stand in for past transcripts.
+
 When launched through the repository README, continue the collection in the
 same conversation after setup. The target project is the user's project from
 before setup, not the collection kit. Use the printed collection workspace;

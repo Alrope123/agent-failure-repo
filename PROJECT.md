@@ -6,7 +6,7 @@
 | Codebase | This repository |
 | Git remote | https://github.com/DylanZSZ/agent-failure-repo.git |
 | Language / runtime | Python 3.9 or newer; standard library only |
-| Entrypoints | `README.md`, `commands/start.py`, `commands/install_skill.py`, `commands/new_problem.py`, `commands/validate.py`, `make check` |
+| Entrypoints | `README.md`, `commands/start.py`, `commands/history.py`, `commands/install_skill.py`, `commands/new_problem.py`, `commands/validate.py`, `make check` |
 | Docs | `README.md`, `AGENTS.md`, `CONTRIBUTING.md`, `docs/` |
 | Status | active |
 

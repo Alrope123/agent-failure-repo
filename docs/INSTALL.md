@@ -12,7 +12,8 @@ path. This page covers optional installation for reuse in later sessions.
 Source: [Repository entrypoint](../README.md).
 
 Install `collect-agent-failures` once, then invoke it in an agent that can read
-the past sessions you select. It searches all 20 symptom categories and new
+historical Claude Code and Codex runs you select. Either host agent checks both
+tools' available transcripts. It searches all 20 symptom categories and new
 modes, captures detailed evidence, and builds small reproduction tasks. The
 installed folder includes the guides, templates, and tools; it works without
 keeping this repository clone. Installation itself does not read any history.
@@ -70,9 +71,11 @@ under several discovery roots.
 In Claude Code, begin with `/collect-agent-failures`. In Codex, begin with
 `$collect-agent-failures`. Append this request, replacing the bracketed scope:
 
-> Review all available past interactions for [these projects, sessions, exports,
-> and dates], which I authorize you to inspect. Collect as many distinct failures
-> as the evidence supports, using all 20 symptom categories and additional modes.
+> Review historical Claude Code and Codex runs for [these projects, sessions, exports,
+> and dates], which I authorize you to inspect. Check both tools regardless of
+> which agent you are. Use the current conversation as supplementary evidence.
+> Collect as many distinct failures as the evidence supports, using all 20
+> symptom categories and additional modes.
 > Get as much relevant information as possible for each candidate: exact requests,
 > messages, tool results, edits, tests, context changes, model settings, outcomes,
 > corrections, and counterevidence. Preserve source references and unknowns.
@@ -82,7 +85,8 @@ In Claude Code, begin with `/collect-agent-failures`. In Codex, begin with
 > material before sharing, and leave exact continuation points for unfinished work.
 
 The agent creates a separate collection workspace. It does not write collected
-histories into the installed skill. If it cannot access prior sessions, provide
+histories into the installed skill. It follows [the historical-run guide](HISTORY.md)
+and records each tool's coverage separately. If it cannot access prior sessions, provide
 selected exports or an authorized path; installation cannot unlock chat history.
 
 ## What you should receive
@@ -106,8 +110,10 @@ that you stored no personal work inside it. Collection workspaces remain separat
 
 The package uses ordinary skill files. Copying, initialization, and metadata
 checks are tested locally; those checks do not establish successful skill
-loading in every agent version. There is no automatic history exporter, paid
-model runner, upload, or claim that all available history is actually readable.
+loading in every agent version. The local history reader supports known
+Claude Code and Codex transcript formats and reports gaps. It cannot recover
+deleted logs or unlock inaccessible cloud chats. There is no paid model runner
+or automatic upload.
 A model run requires a separately authorized model/tool configuration.
 
 ## Sources

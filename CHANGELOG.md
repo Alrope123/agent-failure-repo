@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-10 — Historical Claude Code and Codex runs
+
+- Made historical runs from both tools the primary collection sources.
+- Added project-scoped transcript discovery and paginated reading, including Codex archives and related Claude subagents.
+- Required separate coverage for both tools, original source anchors, and explicit parsing or access gaps.
+- Bundled the reader and historical-run guide with the installable skill.
+
 ## 2026-10-10 — Start the full collection from one message
 
 - Made the README a complete agent workflow with a ready-to-paste launch message.

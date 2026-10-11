@@ -18,6 +18,27 @@ An owner-reviewed, sanitized version may later be stored under docs/collections/
 - Search method and counting units:
 - Raw history storage: retain privately; do not copy its path into a public report.
 
+## Historical runs from both tools
+
+Keep both rows, even if a tool has no accessible records. Start at **not checked**.
+Record found, not present at checked root, inaccessible, no matching project,
+or unsupported format as appropriate. None of those means zero failures.
+Inventorying is separate from reading; count transcript files separately from
+logical sessions and explain replay or duplicate handling.
+
+| Tool | Access status and checked roots (private) | Matching files / logical sessions | Reviewed ranges | Gaps and next action |
+| --- | --- | --- | --- | --- |
+| Claude Code | not checked | unknown | none | Include related subagent transcripts |
+| Codex | not checked | unknown | none | Check active and archived transcripts |
+
+Source: [historical-run discovery](../docs/HISTORY.md) and the local history index.
+The current conversation and supplied exports should have their own source rows.
+
+For every source, record its private source ID, fingerprint, raw line ranges
+reviewed, next unread line, parsing gaps, missing attachments, compaction,
+and links to candidate records. Save carried-forward rules and open questions
+between chunks. Do not add file line counts together and call them agent turns.
+
 ## Collection outcome
 
 Summarize the useful findings and the biggest evidence gaps. Report distinct
